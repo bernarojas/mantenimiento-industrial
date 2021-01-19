@@ -1,0 +1,3106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ef746928d3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Bomba501.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testeoFallas.css' %}"/>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/botonArcade.css' %}"/> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/botonArcade2.css' %}"/>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred"></script>
+</head>
+<body id="body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light colorMenu">
+     <a class="navbar-brand" href="#">
+            <img src="{% static 'images/Imagen1.png' %}" class="img-fluid tamanoLogo" width="226" height="20" alt="">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFallas.html/"> Equipos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFotos.html/"> Reconocimiento IMG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle colorLetraMenu animacionMenu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Notificaciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 buscador" type="search" placeholder="Buscador" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 botonBuscar" type="submit">Buscar</button>
+          </form>
+        </div>
+    </nav>
+    <div class="pb-5 pt-5 pruebaxz"> <!-- style="background-color: #14152f; height: 150px; width: 100%;" -->
+      <div class="container">
+        <div class="p-4" style="background-color: white; border-radius: 5px;">
+          <div class="row pt-2">
+              <div class="col pt-3 pb-3">
+                <h2 class="tituloPrincipal">Inteligencia Artificial Aplicada en el Mantenimiento Industrial</h2>
+              </div>
+          </div>
+          <h5 class="sub-titulo">Tendencias</h5>
+          <div class="row pb-4">
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#exampleModal" data-toggle="modal">Presión agua sello <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Flujo_agua_sello" data-toggle="modal">Flujo agua sello <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_velocidad" data-toggle="modal">Velocidad <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Flujo_transmisor" data-toggle="modal">Flujo transmisor <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Densimetro_nuclear" data-toggle="modal">Densimetro nuclear <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Temperatura" data-toggle="modal">Temperatura <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Aceleracion" data-toggle="modal">Aceleración <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Velocidad_vibracion" data-toggle="modal">Velocidad de vibración <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+          </div>
+
+          <h5 class="sub-titulo">Frecuencias</h5>
+          <div class="row pb-4">
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Presion_agua_sello" data-toggle="modal">Presión agua sello <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_Flujo_agua_sello" data-toggle="modal">Flujo agua sello <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_f_velocidad" data-toggle="modal">Velocidad <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_f_Flujo_transmisor" data-toggle="modal">Flujo transmisor <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_f_Densimetro_nuclear" data-toggle="modal">Densimetro nuclear <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_f_Temperatura" data-toggle="modal">Temperatura <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_f_Aceleracion" data-toggle="modal">Aceleración <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+            <div class="col-3 col-12 col-md-6 col-lg-3 pt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block btn-sensores" data-target="#Modal_f_Velocidad_vibracion" data-toggle="modal">Velocidad de vibración <i class="fas fa-arrow-right icon-btn-sensor"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pb-5" style="background-color: #f5f7f9;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#14152f" fill-opacity="1" d="M0,128L720,0L1440,320L1440,0L720,0L0,0Z"></path></svg> -->
+      <div class="container pb-5">
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <h5 class="card-title pb-2 tituloGrafico">Gráfico Radial</h5>
+                <p class="card-text"><canvas class="charts-1" id="myChartRadar" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <h5 class="card-title pb-3 tituloGrafico">Gráfico de Coordenadas Paralelas</h5>
+                <p class="card-text"><canvas class="charts-1" id="chartjs-111" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <h5 class="card-title pb-3 tituloGrafico">Diagrama de barras</h5>
+                <p class="card-text"><canvas class="charts-1" id="GraficoBarra" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    
+    <div class="pb-5" style="background-color: #f5f7f9;">
+      <div class="container pt-3">
+          <div id="lista" class="row text-center lista">
+
+              <div class="col-12 col-md-4 col-lg-4 pb-4">
+                <div class="card2 sombra2">
+                  <div class="card-header2">
+                    <div class="circuloRojo">
+                    </div>
+                    <div class="circuloAmarillo">
+                    </div>
+                    <div class="circuloVerde">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <div class="row">
+                        <div class="col pb-4">
+                          <div class="porcPrediccion">{{porcentajes.0.0}}%</div>
+                          <canvas class="card-text" id="doughnut1" width="120" height="60"></canvas>
+                        </div>
+                      </div>
+                      <div class="row pb-3">
+                        <div class="col">
+                          <a class="textoCard">{{porcentajes.0.1}}</a>
+                        </div>
+                      </div>
+
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4 pb-4">
+                <div class="card2 sombra2">
+                  <div class="card-header2">
+                    <div class="circuloRojo">
+                    </div>
+                    <div class="circuloAmarillo">
+                    </div>
+                    <div class="circuloVerde">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <div class="row">
+                        <div class="col pb-4">
+                          <div class="porcPrediccion">{{porcentajes.1.0}}%</div>
+                          <canvas class="card-text" id="doughnut2" width="120" height="60"></canvas>
+                        </div>
+                      </div>
+                      <div class="row pb-3">
+                        <div class="col">
+                          <a class="textoCard">{{porcentajes.1.1}}</a>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4 pb-4">
+                <div class="card2 sombra2">
+                  <div class="card-header2">
+                    <div class="circuloRojo">
+                    </div>
+                    <div class="circuloAmarillo">
+                    </div>
+                    <div class="circuloVerde">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <div class="row">
+                        <div class="col pb-4">
+                          <div class="porcPrediccion">{{porcentajes.2.0}}%</div>
+                          <canvas class="card-text" id="doughnut3" width="120" height="60"></canvas>
+                        </div>
+                      </div>
+                      <div class="row pb-3">
+                        <div class="col">
+                          <a class="textoCard">{{porcentajes.2.1}}</a>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="pt-4" style="background: #f5f7f9;">
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col">
+            <form class="form-group" method="get">
+              {% csrf_token %}
+              <div class="row">
+                {% for myFilter in myFilter2.form %}
+                <div class="col-12 col-md-6 col-lg-4 pt-3">
+                  <label for="id_{{myFilter.name}}">{{myFilter.name}}</label>
+                  {{myFilter}}
+                </div>
+                {% endfor %}
+              </div>
+              <div class="row pt-3">
+                <div class="col">
+                  <button type="submit" class="btn btn-success">Buscar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pb-5">
+        <div class="card3">
+          <div class="card-header3 text-center">
+            <div class="circuloGris">
+            </div>
+            <div class="circuloGris">
+            </div>
+            <div class="circuloGris">
+            </div>
+            <strong class="TituloCardForm pt-2">Predecir Fallas {{ultDatIngSens.Ingreso}}<strong><span class="typed"></span></strong></strong>     
+          </div>
+          <div class="card-body p-5">
+            <blockquote class="blockquote mb-0">
+              <form action="/resultadosFoto/" method="POST" autocomplete="off">{% csrf_token %}
+                <div class="form-row pt-3 fontInputs tituloInput">
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Presión agua sello:</label>
+                    <input type="number" value="{{ultDatIngSens.Presion_agua_sello}}" min="0" step="any" class="form-control inputTexto" name="presionAguaSello" placeholder="Presión agua sello" required>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Flujo agua sello:</label>
+                    <input type="number" value="{{ultDatIngSens.Flujo_agua_sello}}" class="form-control inputTexto" name="flujoAguaSello" placeholder="Flujo agua sello" >
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Velocidad:</label>
+                    <input type="number" value="{{ultDatIngSens.Velocidad}}" class="form-control inputTexto" name="velocidad" placeholder="Velocidad">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Flujo transmisor:</label>
+                    <input type="number" value="{{ultDatIngSens.Flujo_transmisor}}" class="form-control inputTexto" name="flujoTranmisor" placeholder="Flujo transmisor">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Densimetro nuclear:</label>
+                    <input type="number" value="{{ultDatIngSens.Densimetro_nuclear}}" class="form-control inputTexto" name="densimetroNuclear" placeholder="Densimetro nuclear">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Temperatura:</label>
+                    <input type="number" value="{{ultDatIngSens.Temperatura}}" class="form-control inputTexto" name="temperatura" placeholder="Temperatura">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Aceleración:</label>
+                    <input type="number" value="{{ultDatIngSens.Aceleracion}}" class="form-control inputTexto" name="Aceleracion" placeholder="Aceleración">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Velocidad de vibración:</label>
+                    <input type="number" value="{{ultDatIngSens.Velocidad_vibracion}}" class="form-control inputTexto" name="VelocidadDeVibracion" placeholder="Velocidad de vibración:">
+                  </div>
+                </div>
+                <div class="row pt-5 text-center">
+                  <div class="col">
+                    <button class="btn btn-primary botonPredecir" type="submit">Predecir <i class="fas fa-caret-right"> </i></button>
+                  </div>
+                </div>
+              </form>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mapa Google Maps -->
+    <div style="background: #f5f7f9;">
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col text-center">
+            <h3 class="OpenSans tituloMapa">Ubicación de Equipos<img src="{% static 'images/LogoMapa3.png' %}" width="" height="" class="img-fluid tamanoLogoMap" alt="">
+            </h3>
+            </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col-12">
+            <div id="map" class="mapa"></div>
+          </div>       
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"><path fill="#14152f" fill-opacity="1" d="M0,128L24,133.3C48,139,96,149,144,133.3C192,117,240,75,288,80C336,85,384,139,432,138.7C480,139,528,85,576,64C624,43,672,53,720,53.3C768,53,816,43,864,64C912,85,960,139,1008,154.7C1056,171,1104,149,1152,128C1200,107,1248,85,1296,69.3C1344,53,1392,43,1416,37.3L1440,32L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Mapa de Google -->
+    <script>
+      var map;
+      function initMap() {
+        var Bomba501 = {lat: -23.763467, lng: -70.470115}
+        var Bomba503 = {lat: -23.761895, lng: -70.468624}
+        var Bomba505 = {lat: -23.761640, lng: -70.468465}
+        var Bomba506 = {lat: -23.761487, lng: -70.467785}
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: Bomba501,
+          zoom: 15
+        });
+
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+        '</div>'+
+          '<h3 id="firstHeading" class="firstHeading" style="color: #304d72;font-weight: 500;font-size: 14px;">'+
+            'Bomba 501'+
+          '</h3>'+
+          '<div id="bodyContent" style="text-align: center;">'+
+            '<header>'+
+            '<h4>{{porcentajes.0.0}}%</h4>'+
+            '</header>'+
+          '<div>'+
+            '<p><b>{{porcentajes.0.1}}</b>' +
+            '</p>'+
+            '<p>Ir a equipo: <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://www.equipo.cl</a> '+
+            '</p>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+          content: contentString
+          });
+        marker = new google.maps.Marker({
+          position: Bomba501,
+          map: map,
+          title: 'Bomba 501',
+          size: new google.maps.Size(20, 32),
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#ffcc02',
+            fillOpacity: 0.7,
+            strokeWeight: 0.5,
+            strokeColor: '#fff'
+          }
+        });
+
+        marker.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+        //marker.setMap(null);
+
+        marker2 = new google.maps.Marker({
+          position: Bomba503,
+          map: map,
+          title: 'Bomba 501',
+          size: new google.maps.Size(20, 32),
+          icon: {
+          url: "{% static 'images/m1.png' %}",
+          scaledSize: new google.maps.Size(30, 30), // scaled size
+          }
+        });
+
+        marker2.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+
+        marker3 = new google.maps.Marker({
+          position: Bomba505,
+          map: map,
+          title: 'Bomba 505',
+          size: new google.maps.Size(20, 32),
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#22b41f',
+            fillOpacity: 0.7,
+            strokeWeight: 0.5,
+            strokeColor: '#fff'
+          }
+        });
+
+        marker3.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+
+        marker4 = new google.maps.Marker({
+          position: Bomba506,
+          map: map,
+          title: 'Bomba 505',
+          size: new google.maps.Size(20, 32),
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#f00',
+            fillOpacity: 0.7,
+            strokeWeight: 0.5,
+            strokeColor: '#fff'
+          }
+        });
+
+        marker4.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+
+    <!-- Modal Presión agua sello -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Presión Agua Sello</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="Presion_agua_sello" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="Presion_agua_sello_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Flujo Agua Sello -->
+    <div class="modal fade" id="Flujo_agua_sello" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Flujo Agua Sello</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="FlujoAguaSello" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="FlujoAguaSello_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Velocidad -->
+    <div class="modal fade" id="Modal_velocidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Velocidad</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="Velocidad" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="Velocidad_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Flujo Transmisor -->
+    <div class="modal fade" id="Modal_Flujo_transmisor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Flujo Transmisor</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="FlujoTranmisor" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="FlujoTranmisor_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Densimetro Nuclear -->
+    <div class="modal fade" id="Modal_Densimetro_nuclear" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Densimetro Nuclear</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="DensimetroNuclear" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="DensimetroNuclear_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Temperatura -->
+    <div class="modal fade" id="Modal_Temperatura" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Temperatura</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="Temperatura" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="Temperatura_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Aceleracion -->
+    <div class="modal fade" id="Modal_Aceleracion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Aceleración</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="Aceleracion" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="Aceleracion_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Velocidad Vibración -->
+    <div class="modal fade" id="Modal_Velocidad_vibracion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Velocidad de Vibración</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="VelocidadVibracion" width="800" height="400"></canvas></p>
+                    <p class="card-text pt-4"><canvas class="charts-1" id="VelocidadVibracion_zoom" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRECUENCIAS -->
+    <!-- Modal Frecuencia Presión agua sello -->
+    <div class="modal fade" id="Modal_Presion_agua_sello" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Presión Agua Sello</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_Presion_agua_sello" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Flujo Agua Sello -->
+    <div class="modal fade" id="Modal_Flujo_agua_sello" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Flujo Agua Sello</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_FlujoAguaSello" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Velocidad -->
+    <div class="modal fade" id="Modal_f_velocidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Velocidad</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_Velocidad" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Flujo Transmisor -->
+    <div class="modal fade" id="Modal_f_Flujo_transmisor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Flujo Transmisor</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_FlujoTranmisor" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Densimetro Nuclear -->
+    <div class="modal fade" id="Modal_f_Densimetro_nuclear" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Densimetro Nuclear</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_DensimetroNuclear" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Temperatura -->
+    <div class="modal fade" id="Modal_f_Temperatura" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Temperatura</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_Temperatura" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Aceleracion -->
+    <div class="modal fade" id="Modal_f_Aceleracion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Aceleracion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_Aceleracion" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Frecuencia Velocidad Vibración -->
+    <div class="modal fade" id="Modal_f_Velocidad_vibracion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Velocidad de Vibración</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                    <p class="card-text"><canvas class="charts-1" id="F_VelocidadVibracion" width="800" height="400"></canvas></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+
+
+<script src="{% static 'jstut7.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="{% static 'sortableJS.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.1.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKF_tERxPa_CzajAV7QrSkNQSlEfthLxk&callback=initMap"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+<script src="{% static 'chartist.js' %}"></script>
+
+
+
+<script>
+  myFunction()
+
+  function myFunction() {
+      if("{{porcentajes.0.1}}" == "Correcto funcionamiento"){
+        var element = document.getElementById("carbonads");
+        element.classList.add("animacionBordeVerde");
+        var textoFalla = document.getElementById("textoFalla");
+        textoFalla.classList.add("textoVerde");
+      }
+      else{
+        if("{{porcentajes.0.0}}" >= 50){
+        var element = document.getElementById("carbonads");
+        element.classList.add("animacionBordeRojo");
+        var textoFalla = document.getElementById("textoFalla");
+        textoFalla.classList.add("textoFallaRojo");
+        }
+        if("{{porcentajes.0.0}}" < 50){
+        var element = document.getElementById("carbonads");
+        element.classList.add("animacionBordeAmarillo");
+        var textoFalla = document.getElementById("textoFalla");
+        textoFalla.classList.add("textoFallaAmarillo");
+        }
+      }
+  }
+</script>
+
+  <script>
+        if("{{porcentajes.1.0}}" > 10){
+          var element2 = document.getElementById("carbonads1");
+          element2.classList.add("carbonadsAmarillo");
+          var textoFalla2 = document.getElementById("textoFalla1");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.2.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla2");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.3.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla3");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.4.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla4");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.5.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla5");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.6.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla6");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.7.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla7");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.8.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla8");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.9.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla9");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.10.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla10");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.11.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla11");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+  </script>
+
+<!-- Gráfico de Barra Horizontal-->
+  <script>
+    var ctx= document.getElementById("GraficoBarra").getContext('2d');
+    var myBarChart = new Chart(ctx, {
+      type: 'horizontalBar',
+      data:{
+        labels:["{{porcentajes.0.1}}","{{porcentajes.1.1}}","{{porcentajes.2.1}}",
+                "{{porcentajes.3.1}}","{{porcentajes.4.1}}","{{porcentajes.5.1}}",
+                "{{porcentajes.6.1}}","{{porcentajes.7.1}}","{{porcentajes.8.1}}",
+                "{{porcentajes.9.1}}","{{porcentajes.10.1}}","{{porcentajes.11.1}}"],
+        datasets:[{
+            label: false,
+            data:["{{porcentajes.0.0}}","{{porcentajes.1.0}}","{{porcentajes.2.0}}",
+                  "{{porcentajes.3.0}}","{{porcentajes.4.0}}","{{porcentajes.5.0}}",
+                  "{{porcentajes.6.0}}","{{porcentajes.7.0}}","{{porcentajes.8.0}}",
+                  "{{porcentajes.9.0}}","{{porcentajes.10.0}}","{{porcentajes.11.0}}"],
+            fill: false,
+            backgroundColor: 'rgb(124, 181, 236)',
+            borderColor: 'rgb(124, 181, 236)',
+            borderWidth:0,
+        }]
+      },
+      options:{
+        legend:{display:!1},
+        scales:{
+            xAxes:[{
+                    ticks:{
+                        beginAtZero:true,
+                        suggestedMax: 100
+                    },
+                    gridLines:{
+                        display:true,// eje y
+                        drawOnChartArea: true, //eje x
+                        drawTicks: false, //borde x
+                    }
+            }],
+            yAxes:[{
+              gridLines:{
+                        display:true,// eje y
+                        drawOnChartArea: true, //eje x                        
+                        drawTicks: true, //borde x
+
+                    }
+            }]
+        },
+        animation: {
+          duration: 5000,
+        },
+      }
+    });
+  </script>
+
+<!-- Gráfico de Radar -->
+<script>
+  var ctx= document.getElementById("myChartRadar").getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    plugins: [{
+      beforeInit: function(chart, options) {
+        chart.legend.afterFit = function() {
+          this.height = this.height + 20;
+        };
+      }
+    }],
+    type: 'radar',
+    data:{
+      labels:["FlujoAguaSello","Velocidad",
+              "FlujoTranmisor","DensimetroNuclear","Temperatura",
+              "Aceleracion","VelocidadDeVibracion"],
+      datasets:[{
+                  label:"{{datosRadar.0.sensoresfallas_set.all.0.Fallas}} ({{datosRadar.0.sensoresfallas_set.all.0.Porc_falla}}%)",
+                  data:["{{datosRadar.0.Flujo_agua_sello}}","{{datosRadar.0.Velocidad}}",
+                        "{{datosRadar.0.Flujo_transmisor}}","{{datosRadar.0.Densimetro_nuclear}}","{{datosRadar.0.Temperatura}}",
+                        "{{datosRadar.0.Aceleracion}}","{{datosRadar.0.Velocidad_vibracion}}"],
+                  fill: false,
+                  backgroundColor:'rgb(88, 89, 91, 0.2)',
+                  borderColor:'rgb(88, 89, 91)',
+                  pointBackgroundColor:'rgb(88, 89, 91)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(88, 89, 91)'
+                },
+                {
+                  label:"{{datosRadar.1.sensoresfallas_set.all.0.Fallas}} ({{datosRadar.1.sensoresfallas_set.all.0.Porc_falla}}%)",
+                  data:["{{datosRadar.1.Flujo_agua_sello}}","{{datosRadar.1.Velocidad}}",
+                        "{{datosRadar.1.Flujo_transmisor}}","{{datosRadar.1.Densimetro_nuclear}}","{{datosRadar.1.Temperatura}}",
+                        "{{datosRadar.1.Aceleracion}}","{{datosRadar.1.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(75, 192, 192, 0.2)',
+                  borderColor:'rgb(75, 192, 192)',
+                  pointBackgroundColor:'rgb(75, 192, 192)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(75, 192, 192)'
+                },
+                {
+                  label:"{{datosRadar.2.sensoresfallas_set.all.0.Fallas}} ({{datosRadar.2.sensoresfallas_set.all.0.Porc_falla}}%)",
+                  data:["{{datosRadar.2.Flujo_agua_sello}}","{{datosRadar.2.Velocidad}}",
+                        "{{datosRadar.2.Flujo_transmisor}}","{{datosRadar.2.Densimetro_nuclear}}","{{datosRadar.2.Temperatura}}",
+                        "{{datosRadar.2.Aceleracion}}","{{datosRadar.2.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(153, 102, 255, 0.2)',
+                  borderColor:'rgb(153, 102, 255)',
+                  pointBackgroundColor:'rgb(153, 102, 255)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(153, 102, 255)'
+                },
+                {
+                  label:"{{datosRadar.3.sensoresfallas_set.all.0.Fallas}} ({{datosRadar.3.sensoresfallas_set.all.0.Porc_falla}}%)",
+                  data:["{{datosRadar.3.Flujo_agua_sello}}","{{datosRadar.3.Velocidad}}",
+                        "{{datosRadar.3.Flujo_transmisor}}","{{datosRadar.3.Densimetro_nuclear}}","{{datosRadar.3.Temperatura}}",
+                        "{{datosRadar.3.Aceleracion}}","{{datosRadar.3.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(54, 162, 235, 0.2)',
+                  borderColor:'rgb(54, 162, 235)',
+                  pointBackgroundColor:'rgb(54, 162, 235)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(54, 162, 235)'
+                },
+                {
+                  label:"{{datosRadar.4.sensoresfallas_set.all.0.Fallas}} ({{datosRadar.4.sensoresfallas_set.all.0.Porc_falla}}%)",
+                  data:["{{datosRadar.4.Flujo_agua_sello}}","{{datosRadar.4.Velocidad}}",
+                        "{{datosRadar.4.Flujo_transmisor}}","{{datosRadar.4.Densimetro_nuclear}}","{{datosRadar.4.Temperatura}}",
+                        "{{datosRadar.4.Aceleracion}}","{{datosRadar.4.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(255, 159, 64, 0.2)',
+                  borderColor:'rgb(255, 159, 64)',
+                  pointBackgroundColor:'rgb(255, 159, 64)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(255, 159, 64)'
+                }
+                ]
+    },
+    options:{
+        layout: {
+            padding: {
+                bottom: 5
+            }
+        },
+        responsive: true,
+        elements:{
+          line:{
+            tension:0,
+            borderWidth:3,
+          }
+        },
+        ticks:{
+              display: true,
+              showLabelBackdrop: false
+        },
+        hover: {
+            // Overrides the global setting
+            mode: 'index'
+        },
+        legend:{
+              display: true,
+              labels:{
+                  padding: 10,
+                  usePointStyle: true,
+              }
+        },
+    }
+  });
+</script>
+<!-- borderColor:['Red', 'Blue', 'yellow', 'green', 'orange', 'pink', 'purple', 'violet'], -->
+<!-- Gráfico de Coordenadas Paralelas -->
+<script>
+  const chart = new Chart(document.getElementById('chartjs-111').getContext('2d'), {
+    plugins: [{
+      beforeInit: function(chart, options) {
+        chart.legend.afterFit = function() {
+          this.height = this.height + 20;
+        };
+      }
+    }],
+    type: 'pcp',
+    data: {
+      labels: [{% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                  "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}", 
+                {% endfor %}],
+      datasets: [
+      {
+        label: "Presión agua sello",
+        data: [{% for Presion_agua_sello_zoom_graph in Presion_agua_sello_zoom_graph %}
+                  "{{Presion_agua_sello_zoom_graph}}",
+                {% endfor %}],
+      },
+      {
+        label: "Flujo agua sello",
+        data: [{% for Flujo_agua_sello_zoom_graph in Flujo_agua_sello_zoom_graph %}
+                  "{{Flujo_agua_sello_zoom_graph}}",
+                {% endfor %}],
+
+      },
+      {
+        label: "Velocidad",
+        data: [{% for Velocidad_zoom_graph in Velocidad_zoom_graph %}
+                  "{{Velocidad_zoom_graph}}",
+                {% endfor %}],
+
+      },
+      {
+        label: "Flujo transmisor",
+        data: [{% for Flujo_transmisor_zoom_graph in Flujo_transmisor_zoom_graph %}
+                  "{{Flujo_transmisor_zoom_graph}}",
+                {% endfor %}],
+        
+      },
+      {
+        label: "Densimetro nuclear",
+        data: [{% for Densimetro_nuclear_zoom_graph in Densimetro_nuclear_zoom_graph %}
+                  "{{Densimetro_nuclear_zoom_graph}}",
+                {% endfor %}],
+
+      },
+      {
+        label: "Temperatura",
+        data: [{% for Temperatura_zoom_graph in Temperatura_zoom_graph %}
+                  "{{Temperatura_zoom_graph}}",
+                {% endfor %}],
+
+      },
+      {
+        label: "Aceleración",
+        data: [{% for Aceleracion_zoom_graph in Aceleracion_zoom_graph %}
+                  "{{Aceleracion_zoom_graph}}",
+                {% endfor %}],
+
+      },
+      {
+        label: "Velocidad de vibración",
+        data: [{% for Velocidad_vibracion_zoom_graph in Velocidad_vibracion_zoom_graph %}
+                  "{{Velocidad_vibracion_zoom_graph}}",
+                {% endfor %}],
+      }]
+    },
+    options: {
+        legend:{
+              display: true,
+              labels:{
+                  padding: 10,
+                  usePointStyle: true,
+              }
+        }
+    }
+  });
+</script>
+
+<!-- PieDonut-->
+<script>
+  porcRestante = 100 - "{{porcentajes.0.0}}"
+ 
+  if ("{{porcentajes.0.1}}" == "Correcto funcionamiento"){
+    color = "#28db5a"
+  }
+  else {
+    if ("{{porcentajes.0.0}}" >= 50){
+      color = "#fb404b"
+    }
+    else{
+      color = "#ffe52b"
+    }
+  }
+
+  var ctx = document.getElementById("doughnut1").getContext("2d");
+  var myChart = new Chart(ctx, {
+        type:"pie",
+          data:{
+            labels:["Red","Blue","Yellow"],
+            datasets:[{
+              pointRadius:0,
+              pointHoverRadius:0,
+              backgroundColor:[color,"#f4f3ef"],
+              borderWidth:0,
+              data:["{{porcentajes.0.0}}",porcRestante]
+            }]
+  },
+   options:{
+    cutoutPercentage: 90,
+    legend:{display:!1},
+    tooltips:{enabled:!1},
+    animation: {
+      duration: 5000,
+    },
+}
+});
+</script>
+
+<script>
+  porcRestante = 100 - "{{porcentajes.1.0}}"
+ 
+  if ("{{porcentajes.1.1}}" == "Correcto funcionamiento"){
+    color = "#28db5a"
+  }
+  else {
+    if ("{{porcentajes.1.0}}" >= 50){
+      color = "#fb404b"
+    }
+    else{
+      color = "#ffe52b"
+    }
+  }
+  var ctx = document.getElementById("doughnut2").getContext("2d");
+  var myChart = new Chart(ctx, {
+        type:"pie",
+          data:{
+            labels:["Red","Blue"],
+            datasets:[{
+              pointRadius:0,
+              pointHoverRadius:0,
+              backgroundColor:[color,"#f4f3ef"],
+              borderWidth:0,
+              data:["{{porcentajes.1.0}}",porcRestante]
+            }]
+  },
+   options:{
+    cutoutPercentage: 90,
+    legend:{display:!1},
+    tooltips:{enabled:!1},
+    animation: {
+      duration: 5000,
+    },
+}
+});
+</script>
+
+<script>
+  porcRestante = 100 - "{{porcentajes.2.0}}"
+ 
+ if ("{{porcentajes.2.1}}" == "Correcto funcionamiento"){
+   color = "#28db5a"
+ }
+ else {
+   if ("{{porcentajes.2.0}}" >= 50){
+     color = "red"
+   }
+   else{
+     color = "#ffe52b"
+   }
+ }
+  var ctx = document.getElementById("doughnut3").getContext("2d");
+  var myChart = new Chart(ctx, {
+        type:"pie",
+          data:{
+            labels:["Red","Blue","Yellow"],
+            datasets:[{
+              pointRadius:0,
+              pointHoverRadius:0,
+              backgroundColor:[color,"#f4f3ef"],
+              borderWidth:0,
+              data:["{{porcentajes.2.0}}",porcRestante]
+            }]
+  },
+   options:{
+    responsive: true,
+    cutoutPercentage: 90,
+    legend:{display:!1},
+    tooltips:{enabled:!1},
+    animation: {
+      duration: 5000,
+    },
+}
+});
+</script>
+
+<!-- Filtros -->
+<script>
+  var element = document.getElementById("id_Equipo");
+  element.classList.add("form-control");
+
+  var element = document.getElementById("id_fecha_exacta");
+  element.classList.add("form-control");
+</script>
+
+<!-- Sensores -->
+<!-- Presion Agua Sello-->
+<script>
+  var ctx = document.getElementById("Presion_agua_sello");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Presión Agua Sello',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Presion_agua_sello in Presion_agua_sello %}
+                      "{{Presion_agua_sello}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          },
+          plugins: {
+            zoom: {
+                pan: {
+                    // Boolean to enable panning
+                    enabled: true,
+        
+                    // Panning directions. Remove the appropriate direction to disable
+                    // Eg. 'y' would only allow panning in the y direction
+                    // A function that is called as the user is panning and returns the
+                    // available directions can also be used:
+                    //   mode: function({ chart }) {
+                    //     return 'xy';
+                    //   },
+                    mode: 'xy',
+        
+                    rangeMin: {
+                        // Format of min pan range depends on scale type
+                        x: null,
+                        y: null
+                    },
+                    rangeMax: {
+                        // Format of max pan range depends on scale type
+                        x: null,
+                        y: null
+                    },
+        
+                    // On category scale, factor of pan velocity
+                    speed: 20,
+        
+                    // Minimal pan distance required before actually applying pan
+                    threshold: 10,
+        
+                    // Function called while the user is panning
+                    onPan: function({chart}) { console.log(`I'm panning!!!`); },
+                    // Function called once panning is completed
+                    onPanComplete: function({chart}) { console.log(`I was panned!!!`); }
+                },
+        
+                // Container for zoom options
+                zoom: {
+                    // Boolean to enable zooming
+                    enabled: true,
+        
+                    // Enable drag-to-zoom behavior
+                    drag: true,
+        
+                    // Drag-to-zoom effect can be customized
+                    // drag: {
+                    // 	 borderColor: 'rgba(225,225,225,0.3)'
+                    // 	 borderWidth: 5,
+                    // 	 backgroundColor: 'rgb(225,225,225)',
+                    // 	 animationDuration: 0
+                    // },
+        
+                    // Zooming directions. Remove the appropriate direction to disable
+                    // Eg. 'y' would only allow zooming in the y direction
+                    // A function that is called as the user is zooming and returns the
+                    // available directions can also be used:
+                    //   mode: function({ chart }) {
+                    //     return 'xy';
+                    //   },
+                    mode: 'xy',
+        
+                    rangeMin: {
+                        // Format of min zoom range depends on scale type
+                        x: null,
+                        y: null
+                    },
+                    rangeMax: {
+                        // Format of max zoom range depends on scale type
+                        x: null,
+                        y: null
+                    },
+        
+                    // Speed of zoom via mouse wheel
+                    // (percentage of zoom on a wheel event)
+                    speed: 0.1,
+        
+                    // Minimal zoom distance required before actually applying zoom
+                    threshold: 2,
+        
+                    // On category scale, minimal zoom level before actually applying zoom
+                    sensitivity: 3,
+        
+                    // Function called while the user is zooming
+                    onZoom: function({chart}) { console.log(`I'm zooming!!!`); },
+                    // Function called once zooming is completed
+                    onZoomComplete: function({chart}) { console.log(`I was zoomed!!!`); }
+                }
+            }
+        }
+      }
+  });
+</script>
+    <!-- Zoom Gráfico -->
+    <script>
+      var ctx = document.getElementById("Presion_agua_sello_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarPresionAguaSelloInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Presión Agua Sello',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [ {% for Presion_agua_sello_zoom_graph in Presion_agua_sello_zoom_graph %}
+                          "{{Presion_agua_sello_zoom_graph}}",
+                          {% endfor %} ],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Flujo Agua Sello-->
+<script>
+  var ctx = document.getElementById("FlujoAguaSello");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Flujo agua sello',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Flujo_agua_sello in Flujo_agua_sello %}
+                      "{{Flujo_agua_sello}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Gráfico -->
+    <script>
+      var ctx = document.getElementById("FlujoAguaSello_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoAguaSelloInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Flujo agua sello',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Flujo_agua_sello_zoom_graph in Flujo_agua_sello_zoom_graph %}
+                            "{{Flujo_agua_sello_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Velocidad-->
+<script>
+  var ctx = document.getElementById("Velocidad");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Velocidad',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Velocidad in Velocidad %}
+                      "{{Velocidad}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Velocidad -->
+    <script>
+      var ctx = document.getElementById("Velocidad_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Velocidad',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Velocidad_zoom_graph in Velocidad_zoom_graph %}
+                            "{{Velocidad_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Flujo_transmisor -->
+<script>
+  var ctx = document.getElementById("FlujoTranmisor");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Flujo Transmisor',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Flujo_transmisor in Flujo_transmisor %}
+                      "{{Flujo_transmisor}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Flujo Transmisor -->
+    <script>
+      var ctx = document.getElementById("FlujoTranmisor_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarFlujoTransmisorInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Flujo Transmisor',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Flujo_transmisor_zoom_graph in Flujo_transmisor_zoom_graph %}
+                            "{{Flujo_transmisor_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Densimetro_Nuclear -->
+<script>
+  var ctx = document.getElementById("DensimetroNuclear");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Densimetro Nuclear',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Densimetro_nuclear in Densimetro_nuclear %}
+                      "{{Densimetro_nuclear}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Densimetro Nuclear -->
+    <script>
+      var ctx = document.getElementById("DensimetroNuclear_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarDensimetroNuclearInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Densimetro Nuclear',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Densimetro_nuclear_zoom_graph in Densimetro_nuclear_zoom_graph %}
+                            "{{Densimetro_nuclear_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Temperatura -->
+<script>
+  var ctx = document.getElementById("Temperatura");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Temperatura',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Temperatura in Temperatura %}
+                      "{{Temperatura}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Temperatura -->
+    <script>
+      var ctx = document.getElementById("Temperatura_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarTemperaturaInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Temperatura',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Temperatura_zoom_graph in Temperatura_zoom_graph %}
+                            "{{Temperatura_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Aceleracion-->
+<script>
+  var ctx = document.getElementById("Aceleracion");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Aceleración',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Aceleracion in Aceleracion %}
+                      "{{Aceleracion}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Aceleración -->
+    <script>
+      var ctx = document.getElementById("Aceleracion_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarAceleracionInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Aceleración',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Aceleracion_zoom_graph in Aceleracion_zoom_graph %}
+                            "{{Aceleracion_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+<!-- Velocidad de vibracion-->
+<script>
+  var ctx = document.getElementById("VelocidadVibracion");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for Fecha in Fecha %}
+                      "{{Fecha|date:"d-m-Y H:i"}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Desviación Estandar Superior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionSup|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionSup|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Desviación Estandar Inferior',
+              type: 'line',
+              borderColor: '#476475',
+              backgroundColor: '#476475',
+              borderWidth:1,
+              data: [{x:'{{Fecha.first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionInf|stringformat:".1f"}}'},
+                      {x:'{{Fecha.last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionInf|stringformat:".1f"}}'}],
+          },
+          {
+              label: 'Velocidad Vibración',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for Velocidad_vibracion in Velocidad_vibracion %}
+                      "{{Velocidad_vibracion}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+    <!-- Zoom Velocidad de Vibración -->
+    <script>
+      var ctx = document.getElementById("VelocidadVibracion_zoom");
+      var myChart = new Chart(ctx, {
+          data:{
+              labels:[    {% for Fecha_zoom_graph in Fecha_zoom_graph %}
+                          "{{Fecha_zoom_graph|date:"d-m-Y H:i"}}",
+                          {% endfor %} ],
+              datasets:[
+              {
+                  label: 'Desviación Estandar Superior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionSup|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionSup|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Desviación Estandar Inferior',
+                  type: 'line',
+                  borderColor: '#476475',
+                  backgroundColor: '#476475',
+                  borderWidth:1,
+                  data: [{x:'{{Fecha_zoom_graph|first|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionInf|stringformat:".1f"}}'},
+                          {x:'{{Fecha_zoom_graph|last|date:"d-m-Y H:i"}}', y:'{{desviacionEstandarVelocidadVibracionInf|stringformat:".1f"}}'}],
+              },
+              {
+                  label: 'Velocidad Vibración',
+                  type: 'line',
+                  borderColor: '#7CB5EC',
+                  backgroundColor: '#7CB5EC', /* rgb(124, 181, 236, 0.2) */
+                  pointRadius: 5,
+                  pointHoverRadius: 7,                
+                  pointHoverBackgroundColor: 'white',
+                  hoverBorderWidth: 3,
+                  /* pointBorderColor: 'red', */
+                  /* lineTension: 0, */
+                  fill: false,
+                  data: [{% for Velocidad_vibracion_zoom_graph in Velocidad_vibracion_zoom_graph %}
+                            "{{Velocidad_vibracion_zoom_graph}}",
+                         {% endfor %}],
+              },
+              ]
+          },
+          options:{
+              scales:{
+                  xAxes:[{
+                      gridLines:{
+                      display:true,
+                      type:'linear',
+                      position:'bottom'
+                      }
+                  }],
+                  yAxes:[{
+                      type: 'linear',
+                      display: true,
+                      gridLines:{
+                      }
+                  }]
+              },
+              legend:{
+                  position: 'bottom',
+                  reverse: true,
+                  labels:{
+                      padding:20,
+                      fontFamily: 'System-ui',
+                      fontColor: 'black',
+                      usePointStyle: true,
+                      boxWidth: 20
+                  }
+              },
+              elements: {
+                  line:{
+                      fill: false,
+                  }
+              }
+          }
+      });
+    </script>
+
+
+<!-- Frecuencia -->
+<!-- Presion Agua Sello-->
+<script>
+  var ctx = document.getElementById("F_Presion_agua_sello");
+  var myChart = new Chart(ctx, {
+      type:"bar",
+      data:{
+          labels:[    {% for FrecuenciaPresionAguaSello in FrecuenciaPresionAguaSello %}
+                      "{{FrecuenciaPresionAguaSello.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Presión Agua Sello',
+              type: 'line',
+              borderColor: '#ffffff',
+              borderWidth: 0.1,
+              lineTension: 0.1,
+              pointRadius: 2,
+              pointHoverRadius: 3,
+              pointBackgroundColor: '#7CB5EC',
+              pointHoverBackgroundColor: 'white',
+              hoverBorderWidth: 2,
+              pointHoverBorderColor: '#7CB5EC',
+              fill: false,
+              data: [ {% for FrecuenciaPresionAguaSello in FrecuenciaPresionAguaSello %}
+                      "{{FrecuenciaPresionAguaSello.1}}",
+                      {% endfor %} ],
+          },
+          {
+              label: 'Presión Agua Sello',
+              backgroundColor: '#7CB5EC',
+              borderColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaPresionAguaSello in FrecuenciaPresionAguaSello %}
+                      "{{FrecuenciaPresionAguaSello.1}}",
+                      {% endfor %} ]
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  },
+                  ticks: {
+                    beginAtZero: true
+                  }
+              }]
+          },
+          legend:{
+            display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Flujo Agua Sello-->
+<script>
+  var ctx = document.getElementById("F_FlujoAguaSello");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaFlujoAguaSello in FrecuenciaFlujoAguaSello %}
+                      "{{FrecuenciaFlujoAguaSello.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Flujo Agua Sello',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaFlujoAguaSello in FrecuenciaFlujoAguaSello %}
+                      "{{FrecuenciaFlujoAguaSello.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Velocidad-->
+<script>
+  var ctx = document.getElementById("F_Velocidad");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaVelocidad in FrecuenciaVelocidad %}
+                      "{{FrecuenciaVelocidad.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Velocidad',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaVelocidad in FrecuenciaVelocidad %}
+                      "{{FrecuenciaVelocidad.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Flujo_transmisor-->
+<script>
+  var ctx = document.getElementById("F_FlujoTranmisor");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaFlujo_transmisor in FrecuenciaFlujo_transmisor %}
+                      "{{FrecuenciaFlujo_transmisor.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Flujo Transmisor',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaFlujo_transmisor in FrecuenciaFlujo_transmisor %}
+                      "{{FrecuenciaFlujo_transmisor.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Densimetro_Nuclear-->
+<script>
+  var ctx = document.getElementById("F_DensimetroNuclear");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaDensimetro_nuclear in FrecuenciaDensimetro_nuclear %}
+                      "{{FrecuenciaDensimetro_nuclear.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Densimetro Nuclear',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaDensimetro_nuclear in FrecuenciaDensimetro_nuclear %}
+                      "{{FrecuenciaDensimetro_nuclear.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Temperatura -->
+<script>
+  var ctx = document.getElementById("F_Temperatura");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaTemperatura in FrecuenciaTemperatura %}
+                      "{{FrecuenciaTemperatura.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Temperatura',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaTemperatura in FrecuenciaTemperatura %}
+                      "{{FrecuenciaTemperatura.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Aceleracion -->
+<script>
+  var ctx = document.getElementById("F_Aceleracion");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaAceleracion in FrecuenciaAceleracion %}
+                      "{{FrecuenciaAceleracion.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Aceleracion',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaAceleracion in FrecuenciaAceleracion %}
+                      "{{FrecuenciaAceleracion.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+<!-- Velocidad de vibracion -->
+<script>
+  var ctx = document.getElementById("F_VelocidadVibracion");
+  var myChart = new Chart(ctx, {
+      data:{
+          labels:[    {% for FrecuenciaVelocidad_vibracion in FrecuenciaVelocidad_vibracion %}
+                      "{{FrecuenciaVelocidad_vibracion.0}}",
+                      {% endfor %} ],
+          datasets:[
+          {
+              label: 'Velocidad de Vibracion',
+              type: 'bar',
+              borderColor: '#7CB5EC',
+              backgroundColor: '#7CB5EC',
+              lineTension: 0.1,
+              fill: false,
+              lineTension: 0,
+              data: [ {% for FrecuenciaVelocidad_vibracion in FrecuenciaVelocidad_vibracion %}
+                      "{{FrecuenciaVelocidad_vibracion.1}}",
+                      {% endfor %} ],
+          },
+          ]
+      },
+      options:{
+          scales:{
+              xAxes:[{
+                  gridLines:{
+                  display:true,
+                  type:'linear',
+                  position:'bottom'
+                  }
+              }],
+              yAxes:[{
+                  type: 'linear',
+                  display: true,
+                  gridLines:{
+                  }
+              }]
+          },
+          legend:{
+              display:!1,
+              position: 'bottom',
+              reverse: true,
+              labels:{
+                  padding:20,
+                  fontFamily: 'System-ui',
+                  fontColor: 'black',
+                  usePointStyle: true,
+                  boxWidth: 20
+              }
+          },
+          elements: {
+              line:{
+                  fill: false,
+              }
+          }
+      }
+  });
+</script>
+
+<!-- {% for sensores in sensores %}
+  <p>{{sensores.0}}{{sensores.1}}</p>
+{% endfor %} -->
+</body>
+</html>

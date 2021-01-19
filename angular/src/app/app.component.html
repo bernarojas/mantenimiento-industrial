@@ -1,0 +1,16 @@
+<app-cabecera></app-cabecera>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+<app-footer></app-footer>
+
+<script>
+
+var foo = angular.module('foo', ['bar']);
+
+foo.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+}]);
+  
+</script>

@@ -1,0 +1,71 @@
+.menu{
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(47, 53, 79, .9);
+    height: 100vh;
+    transform: translateY(-50px);
+    transition: .3s transform, .3s opacity;
+    will-change: transform;
+}
+
+.menu ul{
+    padding: 0;
+    list-style: none;
+}
+
+.menu li{
+    border-top: 1px solid hsl(229, 8%, 60%);
+}
+
+.menu li:last-child a{
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 1em;
+    padding: .7em;
+}
+
+.menu a{
+    color: white;
+    text-decoration:none;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding: 1em;
+    letter-spacing: 2px;
+    /* border: 1px solid red; */
+}
+
+.menu-checkbox{
+    display: none;
+}
+
+.menu-checkbox:checked ~ .header .menu-open{
+    background: url('../../images/icon-close.svg') no-repeat center;
+}
+
+.menu-checkbox:checked ~ .header{
+    background: rgba(47, 53, 79, .9);
+}
+
+.menu-checkbox:checked ~ .header .header-logo{
+    background: url('../../images/logo-bookmark2.svg') no-repeat center;
+}
+
+.menu-checkbox:checked ~ .header .menu{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-open{
+    user-select: none;
+    background: url('../../images/icon-hamburger.svg') no-repeat center;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+}

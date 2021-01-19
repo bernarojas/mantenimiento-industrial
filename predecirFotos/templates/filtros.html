@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ef746928d3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Bomba501.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testeoFallas.css' %}"/>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/botonArcade.css' %}"/> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/botonArcade2.css' %}"/>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+<body>
+    {% for datosExcel in datosExcel%}
+        <p>{{datosExcel.0|date:"d-m-Y H:i"}}</p>
+    {% endfor %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="get">{% csrf_token %}
+                    <input type="text" name="buscar" placeholder="Buscar...">
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-12">
+          <div class="card cardGraficoCircular">
+            <div class="card-body text-center">
+              <h5 class="card-title pb-3 tituloGrafico">Diagrama de Lineal</h5>
+              <p class="card-text"><canvas class="charts-1" id="myChartLineal" width="800" height="400"></canvas></p>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+
+<script>
+
+    myChartLineal
+    function totalCasesChart(ctx){
+        const chart = new Chart(ctx, {
+        type: 'line',
+        data:{
+            labels:[    {% for datosExcel in datosExcel %}
+                        "{{datosExcel.0|date:"d-m-Y H:i"}}",
+                        {% endfor %} ],
+            datasets:[
+            {
+                label: 'Funcionando',
+                borderColor: '#78c8a1',
+                backgroundColor: 'rgb(120, 200, 161, 0.6)',
+                lineTension: 0.1,
+                data: [ {% for datosExcel in datosExcel %}
+                        "{{datosExcel.1}}",
+                        {% endfor %} ],
+            },
+            {
+                label: 'Presión Agua Sello',
+                borderColor: 'rgb(244, 91, 91)',
+                backgroundColor: 'rgb(244, 91, 91, 0.6)',
+                lineTension: 0.1,
+                data: [ {% for datosExcel in datosExcel %}
+                        "{{datosExcel.2}}",
+                        {% endfor %} ],
+            },
+            {
+                label: 'Flujo Agua Sello',
+                borderColor: 'rgb(255, 216, 52)',
+                backgroundColor: 'rgb(255, 216, 52, 0.6)',
+                lineTension: 0.1,
+                data: [ {% for datosExcel in datosExcel %}
+                        "{{datosExcel.3}}",
+                        {% endfor %} ],
+            },
+            {
+                label: 'Velocidad',
+                borderColor: 'rgb(124, 181, 236)',
+                backgroundColor: 'rgb(124, 181, 236, 0.6)',
+                lineTension: 0.1,
+                data: [ {% for datosExcel in datosExcel %}
+                        "{{datosExcel.4}}",
+                        {% endfor %} ],
+            },
+            {
+                label: 'Flujo Transmisor',
+                borderColor: 'rgb(107, 121, 171)',
+                backgroundColor: 'rgb(107, 121, 171, 0.6)',
+                lineTension: 0.1,
+                data: [ {% for datosExcel in datosExcel %}
+                        "{{datosExcel.5}}",
+                        {% endfor %} ],
+            },
+            {
+                label: 'Densimetro Nuclear',
+                borderColor: 'rgb(86, 86, 83)',
+                backgroundColor: 'rgb(86, 86, 83, 0.6)',
+                lineTension: 0.1,
+                data: [ {% for datosExcel in datosExcel %}
+                        "{{datosExcel.6}}",
+                        {% endfor %} ],
+            },
+            ]
+        },
+        options:{
+            scales:{
+            xAxes:[{
+                gridLines:{
+                display:false,
+                }
+            }]
+            },
+            title:{
+            display: true,
+            text: '',
+            fontSize: 30,
+            padding: 30,
+            fontColor: '#12619c',
+            },
+            legend:{
+            position: 'bottom',
+            labels:{
+                padding:20,
+                //boxWidth:25,
+                fontFamily: 'System-ui',
+                fontColor: 'black',
+                usePointStyle: true,
+                boxWidth: 20
+            }
+            },
+            /*layout:{
+            padding:{
+                left: 10,
+                right:30,
+                top: 10,
+            }
+            },*/
+            tooltips:{
+            //backgroundColor: '#0584f6',
+            //titleFontSize: 20,
+            // xPadding:20,
+            //yPadding:20,
+            //bodyFontSize:15,
+            // bodySpacing:10,
+            //mode: 'x',
+            mode: 'index',
+            intersect: true
+            },
+            elements: {
+            line:{
+                //borderWidth: 4,
+                fill: false,
+            },
+            point: {
+                //radius: 6,
+                //borderWidth: 4,
+                //backgroundColor: 'white',
+                //hoverRadius:8,
+                //hoverBorderWidth:4,
+            }
+            }
+        }
+        })
+    }
+    
+    function renderCharts(){
+        const ctx = document.querySelector('#myChartLineal').getContext('2d')
+        totalCasesChart(ctx)
+    }
+    renderCharts()
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+<script href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.4"></script>
+<script src="{% static 'jstut7.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="{% static 'sortableJS.js' %}"></script>
+<script src="{% static 'typedJs.js' %}"></script>
+</body>
+</html>

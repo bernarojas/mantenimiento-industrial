@@ -1,0 +1,95 @@
+.iconoFoto {
+  font-size: 17px;
+}
+
+.colorMenu {
+  background-color: #ffffff !important;
+  padding: 16px;
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.01), inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+.tamanoLogo {
+  max-width: 85% !important;
+  vertical-align: -1px;
+}
+
+.botonBuscar {
+  background: white;
+  border: none;
+  color: #000000;
+  border-radius: 0px;
+  font-weight: 500;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-bottom: 9px;
+  border-radius: 3px;
+}
+
+.botonBuscar:hover {
+  background-color: rgb(224, 224, 224);
+  border: none;
+  color: #000000;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.botonBuscar2 {
+  background: linear-gradient(to right, #ff6f00, #ff9100d9);
+  color: white;
+  border: none;
+  /* border: 2px; */
+  border-radius: 2px;
+}
+
+.buscador {
+  border: 0;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 6px 8px;
+  background: bottom;
+  /*color: #85888a;
+    background: #f7f7f7;*/
+  border-bottom: 3px solid #adadad;
+}
+
+.buscador:focus {
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  border-color: #ffffff;
+  border-bottom: 3px solid black;
+  outline: 0;
+  border-radius: 0px;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.colorLetraMenu {
+  color: #000000b8 !important;
+}
+
+.colorLetraMenu:hover {
+  color: #000000a6 !important;
+}
+
+.animacionMenu {
+  position: relative;
+  transition: 0.2s;
+}
+
+.animacionMenu:hover {
+  position: relative;
+  transition: 0.2s;
+  border-bottom: 0px solid #ffffff !important;
+}
+
+.animacionMenu:hover::before {
+  position: absolute;
+  content: "" !important;
+  border-bottom: 3px solid #000000 !important;
+  width: 50%;
+  right: 25%;
+  bottom: 0;
+  transition: 0.5s;
+}

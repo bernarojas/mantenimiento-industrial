@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/templates/templateStyles.css' %}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo:100,300,regular,500,700,800,900"
+      rel="stylesheet"
+    />
+    <title>Frontend</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="diamante"></div>
+      <h1>Hola</h1>
+    </div>
+    <input type="checkbox" id="open" class="menu-checkbox" />
+    <header class="header">
+      <div class="u-wrapper">
+        <div class="header-content">
+          <a href="#" class="header-logo"></a>
+          <label for="open" class="menu-open"></label>
+          <nav class="menu">
+            <div class="u-wrapper">
+              <ul>
+                <!-- Lista desordenada: los elementos de la lista están mascados con viñetas
+                            Lista ordenada <ol>: Los elementos de la lista están mascados con viñetas -->
+                <li>
+                  <!-- Define un elemento de la lista-->
+                  <a href="#">Features</a>
+                  <!-- Enlace-->
+                </li>
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="u-wrapper">
+        <img
+          class="hero-image"
+          src="../static/images/illustration-hero.svg"
+          alt=""
+        />
+        <h1 class="u-h1">A Simple Bookmark Manager</h1>
+        <p class="u-p">
+          A clean and simple interface to organize your favourite websites. Open
+          a new browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div class="hero-button">
+          <button class="u-button">Get it on Chrome</button>
+          <button class="u-button is-gray">Get it on Firefox</button>
+        </div>
+      </div>
+
+      <div class="u-tabs"></div>
+    </section>
+  </body>
+</html>

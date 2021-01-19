@@ -1,0 +1,1129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ef746928d3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Bomba501.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testeoFallas.css' %}"/>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/botonArcade.css' %}"/> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/botonArcade2.css' %}"/>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred"></script>
+    
+</head>
+<body id="body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light colorMenu">
+     <a class="navbar-brand" href="#">
+            <img src="{% static 'images/Imagen2.png' %}" class="img-fluid tamanoLogo" width="226" height="20" alt="">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFallas.html/"> Equipos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFotos.html/"> Reconocimiento IMG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle colorLetraMenu animacionMenu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Notificaciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 buscador" type="search" placeholder="Buscador" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 botonBuscar" type="submit">Buscar</button>
+          </form>
+        </div>
+    </nav>
+    <div style="background-color: #14152f; height: 400px; width: 100%;">
+      <div class="container">
+        <div class="row pt-4">
+            <div class="col pt-5">
+              <h2 class="tituloPrincipal">Inteligencia Artificial Aplicada en el Mantenimiento Industrial</h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="pb-5" style="background-color: #f5f7f9;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#14152f" fill-opacity="1" d="M0,128L720,0L1440,320L1440,0L720,0L0,0Z"></path></svg>
+      <div class="container pb-5">
+        <div class="row pt-5">
+          <div class="col-12" style="margin-top: -600px;">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <!--{% for datosSensores in datosSensores %}
+                {% for datosSensores in datosSensores.sensoresfallas_set.all%}
+                    {{datosSensores.Fecha}},
+                {% endfor%}
+              {% endfor %}-->
+                <h5 class="card-title pb-3 tituloGrafico"><!--*{{datosRadar.1.EQUIPOSCOLOSO.all.0.Nombre_equipo}}*
+                                                          /{{datosRadar.1.FALLAS.all.0.Porc_falla}}/
+                            "{{datosRadar.1.Codigo_s}}" 
+                              "{{datosRadar.1.Equipo.Codigo_e}}"
+                                                          |{{datosRadar.1.Equipo_id.Codigo_e}}|  
+                                "{{datosRadar.1.Flujo_agua_sello}}"
+                                  "{{datosRadar.1.Falla.all.0.Nombre_falla}}"
+                                                           #{{datosRadar.1.sensoresfallas_set.all.0.Ingreso}}#
+                                                           ${{datosRadar.1.SENSORESFALLAS_set.all.0.Ingreso}}$
+                                                           %{{datosRadar.1.Falla_set.all.Ingreso}}%
+                                                           &"{{datosRadar.1.Falla_set.all.0.Ingreso}}"&
+                                                           ={{datosRadar.1.Falla_set.0.Ingreso}}=
+                                                           //{{datosRadar.1.SENSORESFALLAS.all.0.Ingreso}}//
+                                                           +{{datosRadar.1.SENSORESFALLAS_set.all.0.Ingreso}}+
+                                                           _{{datosRadar.1.SENSORESFALLAS_set.0.Ingreso}}_-->
+                                                           Gráfico Radial</h5>
+
+                <p class="card-text"><canvas class="charts-1" id="myChartRadar2" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <h5 class="card-title pb-3 tituloGrafico">Gráfico Radial</h5>
+                <p class="card-text"><canvas class="charts-1" id="myChartRadar" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <h5 class="card-title pb-3 tituloGrafico">Diagrama de Lineal</h5>
+                <p class="card-text"><canvas class="charts-1" id="myChartLineal" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="card cardGraficoCircular">
+              <div class="card-body text-center">
+                <h5 class="card-title pb-3 tituloGrafico">Diagrama de barras</h5>
+                <p class="card-text"><canvas class="charts-1" id="myChart" width="800" height="400"></canvas></p>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    
+    <div class="pb-5" style="background-color: #f5f7f9;">
+      <div class="container pt-3">
+          <div id="lista" class="row text-center lista">
+
+              <div class="col-12 col-md-4 col-lg-4 pb-4">
+                <div class="card2 sombra2">
+                  <div class="card-header2">
+                    <div class="circuloRojo">
+                    </div>
+                    <div class="circuloAmarillo">
+                    </div>
+                    <div class="circuloVerde">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <div class="row">
+                        <div class="col pb-4">
+                          <div class="porcPrediccion">{{porcentajes.0.0}}%</div>
+                          <canvas class="card-text" id="doughnut1" width="120" height="60"></canvas>
+                        </div>
+                      </div>
+                      <div class="row pb-3">
+                        <div class="col">
+                          <a class="textoCard">{{porcentajes.0.1}}</a>
+                        </div>
+                      </div>
+
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4 pb-4">
+                <div class="card2 sombra2">
+                  <div class="card-header2">
+                    <div class="circuloRojo">
+                    </div>
+                    <div class="circuloAmarillo">
+                    </div>
+                    <div class="circuloVerde">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <div class="row">
+                        <div class="col pb-4">
+                          <div class="porcPrediccion">{{porcentajes.1.0}}%</div>
+                          <canvas class="card-text" id="doughnut2" width="120" height="60"></canvas>
+                        </div>
+                      </div>
+                      <div class="row pb-3">
+                        <div class="col">
+                          <a class="textoCard">{{porcentajes.1.1}}</a>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4 pb-4">
+                <div class="card2 sombra2">
+                  <div class="card-header2">
+                    <div class="circuloRojo">
+                    </div>
+                    <div class="circuloAmarillo">
+                    </div>
+                    <div class="circuloVerde">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <div class="row">
+                        <div class="col pb-4">
+                          <div class="porcPrediccion">{{porcentajes.2.0}}%</div>
+                          <canvas class="card-text" id="doughnut3" width="120" height="60"></canvas>
+                        </div>
+                      </div>
+                      <div class="row pb-3">
+                        <div class="col">
+                          <a class="textoCard">{{porcentajes.2.1}}</a>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="pt-4" style="background: #f5f7f9;">
+    <!-- <div class="container pb-5">
+        <div class="p-4 mb-5 pb-5 marcoTesteo">
+          <div class="row">
+            <div class="col text-center pt-1 tituloTesteo">
+              <h2>Predecir <strong><span class="typed"></span></strong><i class="fab fa-connectdevelop"></i></h2>
+            </div>
+          </div>
+          <form action="/resultadosFoto/" method="POST" autocomplete="off">{% csrf_token %}
+            <div class="form-row pt-3 fontInputs tituloInput">
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Presión agua sello:</label>
+                <input type="number" value="{{presionAguaSello}}" min="0" step="any" class="form-control" name="presionAguaSello" placeholder="Presión agua sello" required>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Flujo agua sello:</label>
+                <input type="number" value="{{flujoAguaSello}}" class="form-control" name="flujoAguaSello" placeholder="Flujo agua sello" >
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Velocidad:</label>
+                <input type="number" value="{{velocidad}}" class="form-control" name="velocidad" placeholder="Velocidad">
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Flujo transmisor:</label>
+                <input type="number" value="{{flujoTranmisor}}" class="form-control" name="flujoTranmisor" placeholder="Flujo transmisor">
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Densimetro nuclear:</label>
+                <input type="number" value="{{densimetroNuclear}}" class="form-control" name="densimetroNuclear" placeholder="Densimetro nuclear">
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Temperatura:</label>
+                <input type="number" value="{{temperatura}}" class="form-control" name="temperatura" placeholder="Temperatura">
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Aceleración:</label>
+                <input type="number" value="{{Aceleracion}}" class="form-control" name="Aceleracion" placeholder="Aceleración">
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 pt-3">
+                <label for="exampleInputEmail1">Velocidad de vibración:</label>
+                <input type="number" value="{{VelocidadDeVibracion}}" class="form-control" name="VelocidadDeVibracion" placeholder="Velocidad de vibración:">
+              </div>
+            </div>
+            <div class="row pt-5 text-center">
+              <div class="col">
+                <button class="btn btn-primary botonPredecir" type="submit">Predecir <i class="fas fa-caret-right"> </i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+--> 
+      <div class="container pb-5">
+        <div class="card3">
+          <div class="card-header3 text-center">
+            <div class="circuloGris">
+            </div>
+            <div class="circuloGris">
+            </div>
+            <div class="circuloGris">
+            </div>
+            <strong class="TituloCardForm pt-2">Predecir Fallas <strong><span class="typed"></span></strong></strong>     
+          </div>
+          <div class="card-body p-5">
+            <blockquote class="blockquote mb-0">
+              <form action="/resultadosFoto/" method="POST" autocomplete="off">{% csrf_token %}
+                <div class="form-row pt-3 fontInputs tituloInput">
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Presión agua sello:</label>
+                    <input type="number" value="{{presionAguaSello}}" min="0" step="any" class="form-control inputTexto" name="presionAguaSello" placeholder="Presión agua sello" required>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Flujo agua sello:</label>
+                    <input type="number" value="{{flujoAguaSello}}" class="form-control inputTexto" name="flujoAguaSello" placeholder="Flujo agua sello" >
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Velocidad:</label>
+                    <input type="number" value="{{velocidad}}" class="form-control inputTexto" name="velocidad" placeholder="Velocidad">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Flujo transmisor:</label>
+                    <input type="number" value="{{flujoTranmisor}}" class="form-control inputTexto" name="flujoTranmisor" placeholder="Flujo transmisor">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Densimetro nuclear:</label>
+                    <input type="number" value="{{densimetroNuclear}}" class="form-control inputTexto" name="densimetroNuclear" placeholder="Densimetro nuclear">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Temperatura:</label>
+                    <input type="number" value="{{temperatura}}" class="form-control inputTexto" name="temperatura" placeholder="Temperatura">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Aceleración:</label>
+                    <input type="number" value="{{Aceleracion}}" class="form-control inputTexto" name="Aceleracion" placeholder="Aceleración">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 pt-3">
+                    <label class="inputTitulo" for="exampleInputEmail1">Velocidad de vibración:</label>
+                    <input type="number" value="{{VelocidadDeVibracion}}" class="form-control inputTexto" name="VelocidadDeVibracion" placeholder="Velocidad de vibración:">
+                  </div>
+                </div>
+                <div class="row pt-5 text-center">
+                  <div class="col">
+                    <button class="btn btn-primary botonPredecir" type="submit">Predecir <i class="fas fa-caret-right"> </i></button>
+                  </div>
+                </div>
+              </form>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background: #f5f7f9;">
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col text-center">
+            <h3 class="OpenSans tituloMapa">Ubicación de Equipos<img src="{% static 'images/LogoMapa3.png' %}" width="" height="" class="img-fluid tamanoLogoMap" alt="">
+            </h3>
+            </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col-12">
+            <div id="map" class="mapa"></div>
+          </div>       
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"><path fill="#14152f" fill-opacity="1" d="M0,128L24,133.3C48,139,96,149,144,133.3C192,117,240,75,288,80C336,85,384,139,432,138.7C480,139,528,85,576,64C624,43,672,53,720,53.3C768,53,816,43,864,64C912,85,960,139,1008,154.7C1056,171,1104,149,1152,128C1200,107,1248,85,1296,69.3C1344,53,1392,43,1416,37.3L1440,32L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Mapa de Google -->
+    <script>
+      var map;
+      function initMap() {
+        var Bomba501 = {lat: -23.763467, lng: -70.470115}
+        var Bomba503 = {lat: -23.761895, lng: -70.468624}
+        var Bomba505 = {lat: -23.761640, lng: -70.468465}
+        var Bomba506 = {lat: -23.761487, lng: -70.467785}
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: Bomba501,
+          zoom: 15
+        });
+
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+        '</div>'+
+          '<h3 id="firstHeading" class="firstHeading" style="color: #304d72;font-weight: 500;font-size: 14px;">'+
+            'Bomba 501'+
+          '</h3>'+
+          '<div id="bodyContent" style="text-align: center;">'+
+            '<header>'+
+            '<h4>{{porcentajes.0.0}}%</h4>'+
+            '</header>'+
+          '<div>'+
+            '<p><b>{{porcentajes.0.1}}</b>' +
+            '</p>'+
+            '<p>Ir a equipo: <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://www.equipo.cl</a> '+
+            '</p>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+          content: contentString
+          });
+        marker = new google.maps.Marker({
+          position: Bomba501,
+          map: map,
+          title: 'Bomba 501',
+          size: new google.maps.Size(20, 32),
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#ffcc02',
+            fillOpacity: 0.7,
+            strokeWeight: 0.5,
+            strokeColor: '#fff'
+          }
+        });
+
+        marker.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+        //marker.setMap(null);
+
+        marker2 = new google.maps.Marker({
+          position: Bomba503,
+          map: map,
+          title: 'Bomba 501',
+          size: new google.maps.Size(20, 32),
+          icon: {
+          url: "{% static 'images/m1.png' %}",
+          scaledSize: new google.maps.Size(30, 30), // scaled size
+          }
+        });
+
+        marker2.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+
+        marker3 = new google.maps.Marker({
+          position: Bomba505,
+          map: map,
+          title: 'Bomba 505',
+          size: new google.maps.Size(20, 32),
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#22b41f',
+            fillOpacity: 0.7,
+            strokeWeight: 0.5,
+            strokeColor: '#fff'
+          }
+        });
+
+        marker3.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+
+        marker4 = new google.maps.Marker({
+          position: Bomba506,
+          map: map,
+          title: 'Bomba 505',
+          size: new google.maps.Size(20, 32),
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#f00',
+            fillOpacity: 0.7,
+            strokeWeight: 0.5,
+            strokeColor: '#fff'
+          }
+        });
+
+        marker4.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+<script href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.4"></script>
+<script src="{% static 'jstut7.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="{% static 'sortableJS.js' %}"></script>
+<script src="{% static 'typedJs.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.1.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKF_tERxPa_CzajAV7QrSkNQSlEfthLxk&callback=initMap"></script>
+
+<script>
+  myFunction()
+
+  function myFunction() {
+      if("{{porcentajes.0.1}}" == "Correcto funcionamiento"){
+        var element = document.getElementById("carbonads");
+        element.classList.add("animacionBordeVerde");
+        var textoFalla = document.getElementById("textoFalla");
+        textoFalla.classList.add("textoVerde");
+      }
+      else{
+        if("{{porcentajes.0.0}}" >= 50){
+        var element = document.getElementById("carbonads");
+        element.classList.add("animacionBordeRojo");
+        var textoFalla = document.getElementById("textoFalla");
+        textoFalla.classList.add("textoFallaRojo");
+        }
+        if("{{porcentajes.0.0}}" < 50){
+        var element = document.getElementById("carbonads");
+        element.classList.add("animacionBordeAmarillo");
+        var textoFalla = document.getElementById("textoFalla");
+        textoFalla.classList.add("textoFallaAmarillo");
+        }
+      }
+  }
+</script>
+
+  <script>
+        if("{{porcentajes.1.0}}" > 10){
+          var element2 = document.getElementById("carbonads1");
+          element2.classList.add("carbonadsAmarillo");
+          var textoFalla2 = document.getElementById("textoFalla1");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.2.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla2");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.3.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla3");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.4.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla4");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.5.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla5");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.6.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla6");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.7.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla7");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.8.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla8");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.9.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla9");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.10.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla10");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+        if("{{porcentajes.11.0}}" > 10){
+          var textoFalla2 = document.getElementById("textoFalla11");
+          textoFalla2.classList.add("textoFallaAmarillo");
+        }
+  </script>
+
+<!-- Gráfico de Barra -->
+  <script>
+    var ctxx= document.getElementById("myChart");
+    var myBarChart = new Chart(ctxx, {
+      type: 'horizontalBar',
+      data:{
+        labels:["{{porcentajes.0.1}}","{{porcentajes.1.1}}","{{porcentajes.2.1}}",
+                "{{porcentajes.3.1}}","{{porcentajes.4.1}}","{{porcentajes.5.1}}",
+                "{{porcentajes.6.1}}","{{porcentajes.7.1}}","{{porcentajes.8.1}}",
+                "{{porcentajes.9.1}}","{{porcentajes.10.1}}","{{porcentajes.11.1}}"],
+        datasets:[{
+            label: false,
+            data:["{{porcentajes.0.0}}","{{porcentajes.1.0}}","{{porcentajes.2.0}}",
+                  "{{porcentajes.3.0}}","{{porcentajes.4.0}}","{{porcentajes.5.0}}",
+                  "{{porcentajes.6.0}}","{{porcentajes.7.0}}","{{porcentajes.8.0}}",
+                  "{{porcentajes.9.0}}","{{porcentajes.10.0}}","{{porcentajes.11.0}}"],
+            fill: false,
+            backgroundColor:[
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+            ],
+            borderColor:[
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+                'rgb(124, 181, 236)',
+            ],
+            borderWidth:0
+        }]
+      },
+      options:{
+        legend:{display:!1},
+        tooltips:{enabled:!1},
+        scales:{
+            xAxes:[{
+                    ticks:{
+                        beginAtZero:true,
+                        suggestedMax: 100
+                    },
+                    gridLines:{
+                        display:true,// eje y
+                        drawOnChartArea: true, //eje x
+                        drawTicks: false, //borde x
+                    }
+            }],
+            yAxes:[{
+              gridLines:{
+                        display:true,// eje y
+                        drawOnChartArea: true, //eje x                        
+                        drawTicks: true, //borde x
+
+                    }
+            }]
+        },
+        animation: {
+          duration: 5000,
+        },
+      }
+    });
+  </script>
+
+<!-- Gráficos de Radar -->
+<script>
+  if("{{presionAguaSello}}" > 200){
+    var presionAgaSello = 20;
+  }
+  else{
+    var presionAgaSello = "{{presionAguaSello}}";
+  }
+  var ctx= document.getElementById("myChartRadar").getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'radar',
+    data:{
+      labels:["FlujoAguaSello","Velocidad",
+              "FlujoTranmisor","DensimetroNuclear","Temperatura",
+              "Aceleracion","VelocidadDeVibracion"],
+      datasets:[{
+                  label:"{{porcentajes.0.1}}",
+                  data:["{{flujoAguaSello}}","{{velocidad}}",
+                        "{{flujoTranmisor}}","{{densimetroNuclear}}","{{temperatura}}",
+                        "{{Aceleracion}}","{{VelocidadDeVibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(88, 89, 91, 0.2)',
+                  borderColor:'rgb(88, 89, 91)',
+                  pointBackgroundColor:'rgb(88, 89, 91)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(88, 89, 91)'
+                },
+                {
+                  label:"{{datosRadar.1.Falla.all.0.Nombre_falla}}",
+                  data:["{{datosRadar.1.Flujo_agua_sello}}","{{datosRadar.1.Velocidad}}",
+                        "{{datosRadar.1.Flujo_transmisor}}","{{datosRadar.1.Densimetro_nuclear}}","{{datosRadar.1.Temperatura}}",
+                        "{{datosRadar.1.Aceleracion}}","{{datosRadar.1.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(75, 192, 192, 0.2)',
+                  borderColor:'rgb(75, 192, 192)',
+                  pointBackgroundColor:'rgb(75, 192, 192)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(75, 192, 192)'
+                },
+                {
+                  label:"{{datosRadar.2.Falla.all.0.Nombre_falla}}",
+                  data:["{{datosRadar.2.Flujo_agua_sello}}","{{datosRadar.2.Velocidad}}",
+                        "{{datosRadar.2.Flujo_transmisor}}","{{datosRadar.2.Densimetro_nuclear}}","{{datosRadar.2.Temperatura}}",
+                        "{{datosRadar.2.Aceleracion}}","{{datosRadar.2.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(153, 102, 255, 0.2)',
+                  borderColor:'rgb(153, 102, 255)',
+                  pointBackgroundColor:'rgb(153, 102, 255)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(153, 102, 255)'
+                },
+                {
+                  label:"{{datosRadar.3.Falla.all.0.Nombre_falla}}",
+                  data:["{{datosRadar.3.Flujo_agua_sello}}","{{datosRadar.3.Velocidad}}",
+                        "{{datosRadar.3.Flujo_transmisor}}","{{datosRadar.3.Densimetro_nuclear}}","{{datosRadar.3.Temperatura}}",
+                        "{{datosRadar.3.Aceleracion}}","{{datosRadar.3.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(54, 162, 235, 0.2)',
+                  borderColor:'rgb(54, 162, 235)',
+                  pointBackgroundColor:'rgb(54, 162, 235)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(54, 162, 235)'
+                },
+                {
+                  label:"{{datosRadar.4.Falla.all.0.Nombre_falla}}",
+                  data:["{{datosRadar.4.Flujo_agua_sello}}","{{datosRadar.4.Velocidad}}",
+                        "{{datosRadar.4.Flujo_transmisor}}","{{datosRadar.4.Densimetro_nuclear}}","{{datosRadar.4.Temperatura}}",
+                        "{{datosRadar.4.Aceleracion}}","{{datosRadar.4.Velocidad_vibracion}}"],
+                  fill: true,
+                  backgroundColor:'rgb(255, 159, 64, 0.2)',
+                  borderColor:'rgb(255, 159, 64)',
+                  pointBackgroundColor:'rgb(255, 159, 64)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(255, 159, 64)'
+                }
+                ]
+    },
+    options:{
+        responsive: true,
+        elements:{
+          line:{
+            tension:0,
+            borderWidth:3,
+          }
+        },
+        ticks:{
+              //beginAtZero:false,
+              //min: 0,
+              //max: 500,
+              //stepSize: 400,
+              //suggestedMin:0,
+              //precision: 100,
+              //suggestedMax:100,
+              display: true,
+              //maxTicksLimit: 10,
+              showLabelBackdrop: false
+        },
+        hover: {
+            // Overrides the global setting
+            mode: 'index'
+        }        
+    }
+  });
+</script>
+
+<script>
+  if("{{presionAguaSello}}" > 200){
+    var presionAgaSello = 20;
+  }
+  else{
+    var presionAgaSello = "{{presionAguaSello}}";
+  }
+  var ctx= document.getElementById("myChartRadar2").getContext('2d');
+  var myBarChart = new Chart(ctx, {
+    type: 'radar',
+    data:{
+      labels:["{{porcentajes.0.1}}","{{porcentajes.1.1}}","{{porcentajes.2.1}}",
+              "{{porcentajes.3.1}}","{{porcentajes.4.1}}","{{porcentajes.5.1}}",
+              "{{porcentajes.6.1}}","{{porcentajes.7.1}}","{{porcentajes.8.1}}",
+              "{{porcentajes.9.1}}","{{porcentajes.10.1}}","{{porcentajes.11.1}}"],
+      datasets:[{
+                  label:"{{porcentajes.0.1}}",
+                  data:["{{porcentajes.0.0}}","{{porcentajes.1.0}}","{{porcentajes.2.0}}",
+                        "{{porcentajes.3.0}}","{{porcentajes.4.0}}","{{porcentajes.5.0}}",
+                        "{{porcentajes.6.0}}","{{porcentajes.7.0}}","{{porcentajes.8.0}}",
+                        "{{porcentajes.9.0}}","{{porcentajes.10.0}}","{{porcentajes.11.0}}"],
+                  fill: true,
+                  backgroundColor:'rgb(88, 89, 91, 0.2)',
+                  borderColor:'rgb(88, 89, 91)',
+                  pointBackgroundColor:'rgb(88, 89, 91)',
+                  pointBorderColor:"#fff",
+                  pointHoverBackgroundColor:'#fff',
+                  pointHoverBorderColor:'rgb(88, 89, 91)'
+                }
+                ]
+    },
+    options:{
+        responsive: true,
+        elements:{
+          line:{
+            tension:0,
+            borderWidth:3,
+          }
+        },
+        ticks:{
+              //beginAtZero:false,
+              //min: 0,
+              //max: 500,
+              //stepSize: 400,
+              //suggestedMin:0,
+              //precision: 100,
+              //suggestedMax:100,
+              display: true,
+              //maxTicksLimit: 10,
+              showLabelBackdrop: false
+        },
+        hover: {
+            // Overrides the global setting
+            mode: 'index'
+        }        
+    }
+  });
+</script>
+
+<!-- Gráfico de Linea -->
+<script>
+  //{{you_date_field|date:'Y-m-d H:i a'}}
+  myChartLineal
+  function totalCasesChart(ctx){
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data:{
+        labels:[  {% for datosSensores in datosSensores %}
+        '{{datosSensores.Fecha|date:"d M, H:i a"}}',
+                  {% endfor %} ],
+        datasets:[
+          {
+            label: 'Presión Agua Sello',
+            borderColor: '#78c8a1',
+            backgroundColor: 'rgb(120, 200, 161, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Presion_agua_sello}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Flujo Agua Sello',
+            borderColor: 'rgb(244, 91, 91)',
+            backgroundColor: 'rgb(244, 91, 91, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Flujo_agua_sello}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Velocidad',
+            borderColor: 'rgb(255, 216, 52)',
+            backgroundColor: 'rgb(255, 216, 52, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Velocidad}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Flujo Transmisor',
+            borderColor: 'rgb(124, 181, 236)',
+            backgroundColor: 'rgb(124, 181, 236, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Flujo_transmisor}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Densimetro Nuclear',
+            borderColor: 'rgb(107, 121, 171)',
+            backgroundColor: 'rgb(107, 121, 171, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Densimetro_nuclear}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Temperatura',
+            borderColor: 'rgb(86, 86, 83)',
+            backgroundColor: 'rgb(86, 86, 83, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Temperatura}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Aceleración',
+            borderColor: 'rgb(43, 144, 143)',
+            backgroundColor: 'rgb(43, 144, 143, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Aceleracion}}",
+                    {% endfor %} ],
+          },
+          {
+            label: 'Velocidad de Vibración',
+            borderColor: 'rgb(255, 139, 90)',
+            backgroundColor: 'rgb(255, 139, 90, 0.6)',
+            lineTension: 0.1,
+            data: [ {% for datosSensores in datosSensores %}
+                      "{{datosSensores.Velocidad_vibracion}}",
+                    {% endfor %} ],
+          }
+        ]
+      },
+      options:{
+        scales:{
+          xAxes:[{
+            gridLines:{
+              display:false,
+            }
+          }]
+        },
+        title:{
+          display: true,
+          text: '',
+          fontSize: 30,
+          padding: 30,
+          fontColor: '#12619c',
+        },
+        legend:{
+          position: 'bottom',
+          labels:{
+            padding:20,
+            //boxWidth:25,
+            fontFamily: 'System-ui',
+            fontColor: 'black',
+            usePointStyle: true,
+            boxWidth: 20
+          }
+        },
+        /*layout:{
+          padding:{
+            left: 10,
+            right:30,
+            top: 10,
+          }
+        },*/
+        tooltips:{
+          //backgroundColor: '#0584f6',
+          //titleFontSize: 20,
+         // xPadding:20,
+          //yPadding:20,
+          //bodyFontSize:15,
+         // bodySpacing:10,
+          //mode: 'x',
+          mode: 'index',
+          intersect: true
+        },
+        elements: {
+          line:{
+            //borderWidth: 4,
+            fill: false,
+          },
+          point: {
+            //radius: 6,
+            //borderWidth: 4,
+            //backgroundColor: 'white',
+            //hoverRadius:8,
+            //hoverBorderWidth:4,
+          }
+        },
+        animation: {
+          duration: 5000,
+        },
+      }
+    })
+  }
+
+  function renderCharts(){
+    const ctx = document.querySelector('#myChartLineal').getContext('2d')
+    totalCasesChart(ctx)
+  }
+  renderCharts()
+</script>
+
+<!-- Gráficos de Prueba -->
+<script>
+  var data = {
+  // A labels array that can contain any sort of values
+  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+  // Our series array that contains series objects or in this case series data arrays
+  series: [
+    [5, 2, 4, 2, 0]
+  ]
+};
+
+// Create a new line chart object where as first parameter we pass in a selector
+// that is resolving to our chart container element. The Second parameter
+// is the actual data object.
+new Chartist.Line('.ct-chart', data);
+</script>
+
+<script>
+  // Initialize a Line chart in the container with the ID chart1
+  new Chartist.Line('#chart1', {
+    labels: [1, 2, 3, 4],
+    series: [[100, 120, 180, 200]]
+  });
+
+  // Initialize a Line chart in the container with the ID chart2
+  new Chartist.Bar('#chart2', {
+    labels: [1, 2, 3, 4],
+    series: [[5, 2, 8, 3]]
+  });
+</script>
+
+<!-- PieDonut-->
+<script>
+  porcRestante = 100 - "{{porcentajes.0.0}}"
+ 
+  if ("{{porcentajes.0.1}}" == "Correcto funcionamiento"){
+    color = "#28db5a"
+  }
+  else {
+    if ("{{porcentajes.0.0}}" >= 50){
+      color = "#fb404b"
+    }
+    else{
+      color = "#ffe52b"
+    }
+  }
+
+  var ctx = document.getElementById("doughnut1").getContext("2d");
+  var myChart = new Chart(ctx, {
+        type:"pie",
+          data:{
+            labels:["Red","Blue","Yellow"],
+            datasets:[{
+              pointRadius:0,
+              pointHoverRadius:0,
+              backgroundColor:[color,"#f4f3ef"],
+              borderWidth:0,
+              data:["{{porcentajes.0.0}}",porcRestante]
+            }]
+  },
+   options:{
+    cutoutPercentage: 90,
+    legend:{display:!1},
+    tooltips:{enabled:!1},
+    animation: {
+      duration: 5000,
+    },
+}
+});
+</script>
+
+<script>
+  porcRestante = 100 - "{{porcentajes.1.0}}"
+ 
+  if ("{{porcentajes.1.1}}" == "Correcto funcionamiento"){
+    color = "#28db5a"
+  }
+  else {
+    if ("{{porcentajes.1.0}}" >= 50){
+      color = "#fb404b"
+    }
+    else{
+      color = "#ffe52b"
+    }
+  }
+  var ctx = document.getElementById("doughnut2").getContext("2d");
+  var myChart = new Chart(ctx, {
+        type:"pie",
+          data:{
+            labels:["Red","Blue"],
+            datasets:[{
+              pointRadius:0,
+              pointHoverRadius:0,
+              backgroundColor:[color,"#f4f3ef"],
+              borderWidth:0,
+              data:["{{porcentajes.1.0}}",porcRestante]
+            }]
+  },
+   options:{
+    cutoutPercentage: 90,
+    legend:{display:!1},
+    tooltips:{enabled:!1},
+    animation: {
+      duration: 5000,
+    },
+}
+});
+</script>
+
+<script>
+  porcRestante = 100 - "{{porcentajes.2.0}}"
+ 
+ if ("{{porcentajes.2.1}}" == "Correcto funcionamiento"){
+   color = "#28db5a"
+ }
+ else {
+   if ("{{porcentajes.2.0}}" >= 50){
+     color = "red"
+   }
+   else{
+     color = "#ffe52b"
+   }
+ }
+  var ctx = document.getElementById("doughnut3").getContext("2d");
+  var myChart = new Chart(ctx, {
+        type:"pie",
+          data:{
+            labels:["Red","Blue","Yellow"],
+            datasets:[{
+              pointRadius:0,
+              pointHoverRadius:0,
+              backgroundColor:[color,"#f4f3ef"],
+              borderWidth:0,
+              data:["{{porcentajes.2.0}}",porcRestante]
+            }]
+  },
+   options:{
+    responsive: true,
+    cutoutPercentage: 90,
+    legend:{display:!1},
+    tooltips:{enabled:!1},
+    animation: {
+      duration: 5000,
+    },
+}
+});
+</script>
+
+</body>
+</html>

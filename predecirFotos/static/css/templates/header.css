@@ -1,0 +1,26 @@
+@import './menu.css';
+
+.header{
+    background: white;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em 0;
+    transition: .3s background;
+}
+
+.header-logo{
+    display: inline-flex;
+    width: 150px;
+    height: 40px;
+    background: url('../../images/logo-bookmark.svg') no-repeat center;
+    /* background-size: contain; */
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

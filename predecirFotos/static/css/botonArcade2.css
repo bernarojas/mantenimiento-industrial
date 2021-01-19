@@ -1,0 +1,21 @@
+.arcade{
+  background: linear-gradient(to right, #333333, #dd1818);
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  /* background: red; */
+  border: 10px solid #a00000;
+}
+
+
+.arcade:focus{
+  background: linear-gradient(to right, #333333, #dd1818);
+  border: 10px solid #a00000;
+  height: 45px;
+  line-height: 45px;
+  min-width: 140px;
+  padding: 0 30px;
+}
+
+
+

@@ -1,0 +1,168 @@
+body{
+    background-color: #f8f9fe;
+}
+
+.colorh2 {
+    color: #425066!important;
+    background-color: #fcfcfc!important;
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    margin-bottom: 0!important;
+    /*font-family: 'Gotu', sans-serif!important;*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400!important;
+    font-style: normal!important;
+    font-size: 37px;
+}
+
+@media (max-width: 600px){
+.colorh2 {
+    font-size: 23px;
+}
+}
+
+.tituloCard{
+    color: #8898aa!important;
+    text-transform: uppercase!important;
+    font-size: .8125rem;
+}
+
+.tituloCard2{
+    color: #8898aa!important;
+    text-transform: uppercase!important;
+    font-size: .8225rem;
+    padding-top: 2px;
+}
+
+.subTituloCard{
+    color: #32325d!important;
+    font-weight: 600!important;
+}
+
+.pieCard{
+    color: #2dce89!important;
+}
+
+.pieCardText{
+    color: #8898aa!important;
+    font-size: .875rem!important;
+    font-weight: 300;
+}
+
+.fechaHoraCard{
+    color: #000000!important;
+    font-size: .875rem!important;
+    font-weight: 300;
+}
+
+.iconoCard{
+    border-radius: 50%!important;
+    color: white;
+    background-color: #f5365c!important;
+    font-size: 1.7em;
+    padding: 10px;
+}
+
+.iconoCard2{
+    font-size: 1.3em;
+    color: #ff3702db;
+}
+
+.iconoCard7{
+    color: crimson;
+    font-size: 2em;
+    padding: 10px;
+}
+
+.quitarPaddin{
+    padding: 0px;
+}
+
+.estiloCard{
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: .375rem;
+    background-color: #fff;
+    background-clip: border-box;
+    margin: 0 auto!important;
+}
+
+.contenerPrincipal{
+    /*background: linear-gradient(87deg,#f56036 0,#f5365c 100%)!important;*/
+    background: linear-gradient(145deg,#0d47a1,#42a5f5);
+}
+
+.decoracionTitulo{
+    border-bottom: 0.6px solid #afc1d7fa!important;
+}
+
+.pl-6{
+    padding-left: 25px;
+}
+
+.bordeCard{
+box-shadow: 0 10px 25px 0 rgba(216, 216, 216, 0.3);
+}
+
+
+#imagePreview img{
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border-radius: .25rem!important;
+}
+
+.botonIngresarFto{
+    background-color: #f44336;
+    color: #fff;
+    border-color: #f44336;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 2px;
+    text-transform: uppercase;
+    height: 45px;
+    padding: 0 30px;
+}
+
+.botonIngresarFto:hover {
+    color: #fff!important;
+    background-color: #ca3b30!important;
+    border-color: #bc4239!important;
+}
+
+.iconocarFoto{
+    font-size: 3.7em!important;
+    padding: 10px!important;
+}
+
+.custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + .75rem);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: red!important;
+    content: none!important;
+    background-color: #e9ecef;
+    border-left: inherit;
+    border-radius: 0 .25rem .25rem 0;
+}
+
+.botonCargaFto{
+    text-align: center!important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 20px;
+    border:none;
+    color:white;
+    background-color: crimson;
+}
+
+.iconoCame{
+    line-height: 27px;
+    font-size: 25px;
+}
+
+.imgResultado{
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border-radius: 3px!important;
+}

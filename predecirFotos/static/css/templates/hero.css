@@ -1,0 +1,12 @@
+.hero{
+    text-align: center;
+    padding: 4em 0;
+}
+
+.hero-image{
+    max-width: 100%;
+}
+
+.hero-button{
+    padding-top: 1em;
+}

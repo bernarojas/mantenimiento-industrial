@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ef746928d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styleFotos.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light colorMenu">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/Imagen1.png' %}" class="img-fluid tamanoLogo" width="226" height="20" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFallas.html/"><i class="fas fa-tv"></i> Equipos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFotos.html/"><i class="far fa-image iconoFoto"></i> Reconocimiento IMG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle colorLetraMenu animacionMenu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-comment"></i> Notificaciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 buscador" type="search" placeholder="Buscador" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 botonBuscar" type="submit">Buscar</button>
+          </form>
+        </div>
+    </nav>
+    <h2 class="text-center colorh2">Reconocimiento de imágenes</h2>
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row contenerPrincipal pt-5 pb-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        
+                        <div class="col mb-3">
+                            <div class="card estiloCard" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col quitarPaddin text-center">
+                                            <i class="fas fa-barcode iconocarFoto"></i>
+                                         <!--   <i class="far fa-chart-bar iconoCard"></i>-->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <a class="card-link pieCard"></a>
+                                        <footer class="">
+                                            <form action="/resultadosFoto/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                                             <!--  <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Example file input</label>
+                                                    <input type="file" class="form-control-file" id="imagen" name="fotoBuscada" onchange="handleFiles(this.files)">
+                                                </div>  --> 
+                                                <div class="custom-file mb-3">
+                                                    <input type="file" class="custom-file-input" id="imagen" name="fotoBuscada" onchange="handleFiles(this.files)" lang="es">
+                                                    <label class="custom-file-label botonCargaFto" for="customFileLang">Seleccionar imagen <i class="fas fa-camera-retro float-right iconoCame"></i></label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col text-center">
+                                                        <div id="imagePreview">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col text-center">
+                                                        <input type="submit" class="btn btn-primary botonIngresarFto" value="ingresar foto">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+     (function(){
+         function filePreview(input){
+             if(input.files && input.files[0]){
+                 var reader = new FileReader();
+                 reader.onload = function(e){
+                    $('#imagePreview').html("<img src='"+e.target.result+"' width='"+180+"' height='"+170+"' class='"+'img-fluid'+"' />");
+                 }
+                 reader.readAsDataURL(input.files[0]);
+             }
+         }
+         $('#imagen').change(function(){
+             filePreview(this);
+         });
+     })();   
+    </script>
+</body>
+</html>
