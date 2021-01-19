@@ -27,8 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'predecirFotos',
-    'predecirFotos2',
-    'rest_framework',
     'corsheaders',
     'django_filters',
 ]
