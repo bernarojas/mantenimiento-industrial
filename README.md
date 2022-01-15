@@ -1,16 +1,16 @@
-### Prototipo de una plataforma de inteligencia artificial basado en modelos predictivos para apoyar el proceso de toma de decisiones en múltiples áreas. 
-- Prototipo de una plataforma de inteligencia artificial que permite desarrollar rápidamente modelos predictivos con código trasladable a otros sistemas informáticos desarrollados en python o javascript. Permite apoyar la toma de decisiones a usuarios expertos y no expertos. Esta solución permite acercar las redes neuronales a usos prácticos sin que las personas deban invertir tiempo en programar sus propios modelos predictivos.
-
+### Prototipo de una plataforma de inteligencia artificial que realiza predicciones de fallos mecánicos en bombas industriales. 
+- Prototipo de una plataforma de inteligencia artificial que permite unir los parámetros de mantenimiento con los parámetros operacionales monitoreados por DCS, permitiendo realizar un cruce de información en tiempo real de las bombas industriales, otorgando la posibilidad de predecir fallas en los equipos en base a la información obtenida de redes neuronales.
 
 ### Live Preview:
-- **https://ianstudio.herokuapp.com/**
+- **https://mantenimiento-industrial.herokuapp.com/resultadoTesteo2.html/**
 
 ### Herramientas usadas en el proyecto:
 - **[Python 3.9](https://www.python.org/)**  Lenguaje de programación.
-- **[React](https://es.reactjs.org/)** Biblioteca de JavaScript para construir interfaces de usuario
-- **[Django Rest Framework](https://www.django-rest-framework.org/)**  Framework de herramientas potentes y flexibles para crear API web.
-- **[Boxicons](https://boxicons.com/)**  Framework de iconos vectoriales.
-- **[TensorFlow](https://www.postgresql.org/)** Plataforma de código abierto de aprendizaje automático.
+- **[Django](https://www.djangoproject.com/)**  Framework de desarrollo web de código abierto, escrito en Python.
+- **[TensorFlow](https://www.postgresql.org/)** Plataforma de código abierto de aprendizaje automático (Redes Neuronales).
+- **[Boostrap 5](https://v5.getbootstrap.com/)**  Framework web.
+- **[Font Awesome](https://fontawesome.com/icons?d=gallery)**  Framework de iconos vectoriales.
+- **[PostgreSQL](https://www.postgresql.org/)** Base de datos relacional de código abierto.
 
 <br> <br>
 ### Estructuración del sitio web:
