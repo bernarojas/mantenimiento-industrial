@@ -29,29 +29,3 @@
 </p>
 
 <br> <br>
-#### 4. Entrene el Modelo
-![sistema4](https://user-images.githubusercontent.com/61950433/149113402-67ad4ff0-7995-454d-9c65-b000a7030af0.PNG)
-
-<br> <br>
-#### 5. Evalúe la efectividad del modelo.
-![sistema5](https://user-images.githubusercontent.com/61950433/149113635-9537cf5a-29d1-4a27-906b-f5b164a0b162.PNG) <br> <br>
-![sistema6](https://user-images.githubusercontent.com/61950433/149113794-4500d513-88d4-4234-b1ac-e09ddadbd1cb.PNG) <br> <br>
-![sistema7](https://user-images.githubusercontent.com/61950433/149113962-30b0a861-33be-4f80-a467-2a5ea4cce055.PNG) <br> <br>
-![sistema8](https://user-images.githubusercontent.com/61950433/149114148-42cc4afd-5bb2-4dd1-bf24-4bc8bb34f683.PNG) <br> <br>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/61950433/149114304-a300c5c9-7fa2-46f2-83c5-db0e0fc9f066.PNG" height="400px"/>
-</p>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/61950433/149114447-dc8e13e7-339a-4ea6-a9f8-56c43194a8c0.PNG" height="400px"/>
-</p>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/61950433/149114591-ca9f0830-9ad1-4156-a4ef-c581bf72cf57.PNG" height="400px"/>
-</p>
-
-<br> <br>
-#### 6. Utilice el modelo entrenado para hacer predicciones.
-![sistema12](https://user-images.githubusercontent.com/61950433/149114733-947049d4-6676-4c2a-bedb-79ef71ee9b4a.PNG) <br> <br>
-![sistema13](https://user-images.githubusercontent.com/61950433/149115335-933e3d29-04d7-4610-9123-03d4d772023f.PNG)
