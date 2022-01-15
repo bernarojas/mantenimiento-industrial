@@ -14,7 +14,9 @@
 
 <br> <br>
 ### Estructuración del sitio web:
-![image10](https://user-images.githubusercontent.com/61950433/149616261-55b17a89-2156-4b5e-9148-b9bf24566b5f.gif)
+<p align="center">
+  ![image10](https://user-images.githubusercontent.com/61950433/149616261-55b17a89-2156-4b5e-9148-b9bf24566b5f.gif)
+</p>
 
 <br> <br>
 #### 2. Analice el conjunto de datos.
