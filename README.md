@@ -23,7 +23,7 @@
 ![Captura1](https://user-images.githubusercontent.com/61950433/149616323-2bcb4bc7-de80-4c57-abf2-14f39e851575.PNG)
 
 <br> <br>
-#### 3. Seleccione la variable a predecir.
+![Captura3](https://user-images.githubusercontent.com/61950433/149616940-a01e942e-9986-471d-beac-e75d27b7dc61.PNG)
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/61950433/149113105-fd627055-a953-4295-a2e7-724e7c750d9f.PNG" height="400px"/>
