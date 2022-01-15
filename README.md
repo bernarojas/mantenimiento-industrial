@@ -15,6 +15,7 @@
 <br> <br>
 ### Estructuración del sitio web:
 #### 1. Cargue el conjunto de datos desde un archivo csv
+![Alt Text](https://user-images.githubusercontent.com/61950433/149615882-59f2a0e2-517b-4cbe-be41-24d7b53a9eb0.gif)
 ![Imagen1](https://user-images.githubusercontent.com/61950433/149615882-59f2a0e2-517b-4cbe-be41-24d7b53a9eb0.gif)
 
 <br> <br>
