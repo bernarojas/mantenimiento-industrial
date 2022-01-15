@@ -25,8 +25,7 @@
 <br> <br>
 ![Captura3](https://user-images.githubusercontent.com/61950433/149616940-a01e942e-9986-471d-beac-e75d27b7dc61.PNG)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/61950433/149113105-fd627055-a953-4295-a2e7-724e7c750d9f.PNG" height="400px"/>
-</p>
-
 <br> <br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/61950433/149617092-67d6678f-9893-4495-a0d7-138db37d66f8.png"/>
+</p>
