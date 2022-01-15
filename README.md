@@ -14,13 +14,13 @@
 
 <br> <br>
 ### Estructuración del sitio web:
+<br> <br>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/61950433/149616261-55b17a89-2156-4b5e-9148-b9bf24566b5f.gif"/>
 </p>
 
 <br> <br>
-#### 2. Analice el conjunto de datos.
-![sistema2](https://user-images.githubusercontent.com/61950433/149112914-29d47b4d-27b3-484c-b1b9-bbd69a428053.PNG)
+![Captura1](https://user-images.githubusercontent.com/61950433/149616323-2bcb4bc7-de80-4c57-abf2-14f39e851575.PNG)
 
 <br> <br>
 #### 3. Seleccione la variable a predecir.
