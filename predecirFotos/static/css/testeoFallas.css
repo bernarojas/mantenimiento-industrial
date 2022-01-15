@@ -106,8 +106,10 @@ body{
     background-color: #fff;
     border: none;
     outline: 0;
-    box-shadow: 0 0 0 0.05rem rgb(0, 0, 0);
+    box-shadow: 0 0 0 0 rgb(0, 0, 0);
+    border: 1px solid black;
 }
+
 strong{
     color: #f30101;
     font-weight: normal!important;
@@ -518,6 +520,14 @@ position: relative;
   color: #2e3a4d!important;
 }
 
+.inputTitulo ~ input{
+  transition: 0.2s;
+}
+
+.inputTitulo ~ input:hover {
+  border: 1px solid black;
+}
+
 .inputTexto{
   font-family: "Google Sans",sans-serif!important;
 }
@@ -601,7 +611,7 @@ position: relative;
 }
 
 .pruebaxz{
-  background: url(../images/graficos/dots-small.svg);
+  background: url(../images/graficos/pixel-bg.svg);
 }
 
 .btn-sensores{
@@ -629,4 +639,15 @@ position: relative;
 
 .sub-titulo{
   font-family: "Google Sans",sans-serif;
+}
+
+.background_grey {
+  background: #f5f7f9 !important;
+  padding-bottom: 12px;
+
+  margin-right: 0px !important;
+}
+
+.background_grey span {
+  color: #03a10e;
 }

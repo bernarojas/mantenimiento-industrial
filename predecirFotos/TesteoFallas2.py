@@ -18,22 +18,25 @@ from django.db.models import Count
 
 def Prediccion_fallas2(request):
             #RED NEURONAL PROFUNDA
-            modelo='C:/Users/56975/Desktop/ProyectoDjango/redesneuronales/modelos/modeloFallas.h5'
-            pesos='C:/Users/56975/Desktop/ProyectoDjango/redesneuronales/modelos/pesosFallas.h5'
+            modelo='./modelos/modeloFallas.h5'
+            pesos='./modelos/pesosFallas.h5'
             model = load_model(modelo)
             model.load_weights(pesos)
+
 
             class_names = ['Correcto funcionamiento', 'Fuga / Filtracion Ducto descarga', 'Falla de lubricación', 'Falla de rodamientos',
                               'Detención por falla de rodamientos eje motor trabado', 'Desalineamiento',
                               'Desalineamiento más desgaste de correas', 'Corte de correas', 'Alerta de vibración / revisar causa',
                               'Soltura no vinculada a rodamiento', 'Soltura falla inminente de componente', 'Falla de componente']
 
-            #Guarda en tabla fallas
+            #Guarda las fallas declaradas anteriormente en la tabla predecirFotos_fallas
             for e in range(0, 12):
                 FALLAS.objects.get_or_create(Nombre_falla=class_names[e])
-            #Guarda en equipos en tabla EQUIPOSCOLOSO
+
+            #Crea un equipo en la tabla predecirFotos_equiposcoloso
             EQUIPOSCOLOSO.objects.get_or_create(Nombre_equipo='Bomba 501', Descripcion='ESP3 - Baja Densidad',
                                           Tipo_equipo='PTO.BOMBA')
+
 
             ultDatIngSens = SENSORES.objects.order_by('-Fecha')[:1]
             myFilter2 = OrderFilterFechas(request.GET, queryset=SENSORES.objects.all())
@@ -58,15 +61,10 @@ def Prediccion_fallas2(request):
                   for j in range(0, 12):
                         t = tf.nn.softmax(logits)[j]
                         nombre = class_names[j]
-                        #print("{:4.8f}".format(100*t))
                         porcentajes.append(["{:4.1f}".format(100*t), nombre])
                   name = class_names[class_idx]
-                  #print(porcentajes[9][1])
                   porcentajes.sort()
                   porcentajes.reverse()
-                  #print("Ejemplo {} prediction: {} ({:4.11f}%)".format(i, name, 100*p))
-                  #print("Ejemplo {} prediction: {} ({:1.11f}%)".format(i, name, p))
-                  #print("Ejemplo {} prediction: {} ({:4.1f}%)".format(i, name, 100*p))
                   porcentajeActual=["{:4.1f}".format(100*p),name]
 
 
@@ -84,35 +82,10 @@ def Prediccion_fallas2(request):
             Fecha = SENSORES.objects.values_list("Fecha", flat=True)
             FilterFecha = OrderFilterFechas(request.GET, queryset=Fecha)
             FilterFecha2 = OrderFilterFechas(request.GET,SENSORES.objects.values_list("Fecha", flat=True).order_by('Fecha'))
-            #FilterFecha2 = OrderFilterFechas(request.GET,SENSORES.objects.values_list("Fecha", flat=True).order_by('-Fecha').reverse())❌
-            #FilterFecha2 = OrderFilterFechas(request.GET,SENSORES.objects.values_list("Fecha", flat=True).order_by('Fecha').reverse())❌
-            #FilterFecha2 = OrderFilterFechas(request.GET,SENSORES.objects.values_list("Fecha", flat=True).order_by('Fecha')[::-1])❌
-            #FilterFecha2 = OrderFilterFechas(request.GET,SENSORES.objects.values_list("Fecha", flat=True).order_by('Fecha')[::1])❌
+
             Fecha = FilterFecha.qs
             Fecha_zoom_graph = FilterFecha.qs[::1][-10:]
-            #Fecha_zoom_graph = reversed(FilterFecha.qs[:10])
-            #Fecha_zoom_graph = reversed(FilterFecha2.qs[:10])
 
-            #Fecha_zoom_graph = FilterFecha2.qs[::1][-10:]✔✔
-            #Fecha_zoom_graph = FilterFecha2.qs[10]❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[10:]❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[:-10]❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[::1][:10]❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[::-1][:10]❌✔
-            #Fecha_zoom_graph = FilterFecha2.qs[:10].reverse()❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs.reverse()[:10]❌✔
-            #Fecha_zoom_graph = FilterFecha2.qs[:10].sort()❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[::1][:-10]❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs.sort()[:10]❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[:10].sort()❌❌
-            #Fecha_zoom_graph = FilterFecha2.qs[:10].latest(5)
-            #Fecha_zoom_graph = FilterFecha2.qs[:10].latest()
-            #Fecha_zoom_graph = FilterFecha2.qs.latest()
-            #Fecha_zoom_graph = FilterFecha2.qs.last(5)
-            #Fecha_zoom_graph = FilterFecha2.qs.last()
-            #Fecha_zoom_graph = FilterFecha2.qs[:10].last()
-            #Fecha_zoom_graph2 = FilterFecha2.qs.latest()[:10]
-            #Fecha_zoom_graph = list(FilterFecha2.qs)[-1]
 
             #Presión agua sello
             Presion_agua_sello = SENSORES.objects.values_list("Presion_agua_sello", flat=True)

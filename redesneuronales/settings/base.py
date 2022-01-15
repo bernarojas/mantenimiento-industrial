@@ -1,3 +1,4 @@
+from pathlib import Path
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +28,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'predecirFotos',
-    'corsheaders',
     'django_filters',
 ]
 
@@ -39,7 +39,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'redesneuronales.urls'
@@ -47,7 +46,7 @@ ROOT_URLCONF = 'redesneuronales.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,11 +101,10 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-
-MEDIA_URL = 'predecirFotos/static/media/' #importante
-MEDIA_ROOT = os.path.join(BASE_DIR, 'predecirFotos/static/media') #importante
 STATICFILES_DIRS = [
-
-    os.path.join(BASE_DIR, 'static'),
-    "C:/Users/56975/Desktop/ProyectoDjango/redesneuronales/predecirFotos/static",
+    os.path.join(BASE_DIR, 'static')
 ]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -10,8 +10,6 @@ class OrderFilter(django_filters.FilterSet):
     datetime__end = DateTimeFilter(field_name="Fecha", lookup_expr='lte')
     Velocidad__start = NumberFilter(field_name="Velocidad", lookup_expr='gte')
 
-    #velocidad_start = 
-    #note = CharFilter(field_name='', lookup_exp='icontains')
     class Meta:
         model = Sensores_excel
         fields = '__all__'

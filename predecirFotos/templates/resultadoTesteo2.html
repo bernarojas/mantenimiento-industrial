@@ -39,12 +39,11 @@
 <body id="body">
     <nav class="navbar navbar-expand-lg navbar-light bg-light colorMenu">
      <a class="navbar-brand" href="#">
-            <img src="{% static 'images/Imagen1.png' %}" class="img-fluid tamanoLogo" width="226" height="20" alt="">
+            <img src="{% static 'images/graficos/logo6.png' %}" class="img-fluid tamanoLogo" width="45"  alt="">
       </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -52,17 +51,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link colorLetraMenu animacionMenu" href="http://localhost:8000/predFotos.html/"> Reconocimiento IMG</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle colorLetraMenu animacionMenu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Notificaciones
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -174,6 +162,13 @@
           </div>  
         </div>
       </div>
+    </div>
+
+    <div class="row background_grey">
+      <div class="col text-center">
+        <h3 class="OpenSans tituloMapa">Estado Actual de la <span>Bomba Industrial</span> <img src="{% static 'images/LogoMapa3.png' %}" width="" height="" class="img-fluid tamanoLogoMap" alt="">
+        </h3>
+        </div>
     </div>
     
     <div class="pb-5" style="background-color: #f5f7f9;">
@@ -300,7 +295,7 @@
             </div>
             <div class="circuloGris">
             </div>
-            <strong class="TituloCardForm pt-2">Predecir Fallas {{ultDatIngSens.Ingreso}}<strong><span class="typed"></span></strong></strong>     
+            <strong class="TituloCardForm pt-2">Últimos datos sensoriales registrados de la Bomba Industrial<strong><span class="typed"></span></strong></strong>     
           </div>
           <div class="card-body p-5">
             <blockquote class="blockquote mb-0">
@@ -341,7 +336,7 @@
                 </div>
                 <div class="row pt-5 text-center">
                   <div class="col">
-                    <button class="btn btn-primary botonPredecir" type="submit">Predecir <i class="fas fa-caret-right"> </i></button>
+                    <!-- <button class="btn btn-primary botonPredecir" type="submit">Predecir <i class="fas fa-caret-right"> </i></button> -->
                   </div>
                 </div>
               </form>

@@ -26,6 +26,7 @@
   padding-right: 21px;
   padding-bottom: 9px;
   border-radius: 3px;
+  transition: 0.3s;
 }
 
 .botonBuscar:hover {
@@ -67,6 +68,7 @@
 
 .colorLetraMenu {
   color: #000000b8 !important;
+  transition: 0.3s;
 }
 
 .colorLetraMenu:hover {
@@ -75,13 +77,21 @@
 
 .animacionMenu {
   position: relative;
-  transition: 0.2s;
+  border-bottom: 0px solid #ffffff !important;
+  transition: 0.5s !important;
 }
 
 .animacionMenu:hover {
   position: relative;
-  transition: 0.2s;
+  transition: 0.5s !important;;
   border-bottom: 0px solid #ffffff !important;
+}
+
+
+.animacionMenu::before {
+  border-bottom: 3px solid #ffffff !important;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
 }
 
 .animacionMenu:hover::before {
@@ -91,5 +101,6 @@
   width: 50%;
   right: 25%;
   bottom: 0;
-  transition: 0.5s;
+  opacity: 1;
+  transition: all 0.35s ease-in-out;
 }
