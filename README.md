@@ -29,5 +29,3 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/61950433/149617092-67d6678f-9893-4495-a0d7-138db37d66f8.png"/>
 </p>
-
-![Captura2](https://user-images.githubusercontent.com/61950433/149617266-0e11b38a-cdf0-44cc-a67a-95de4b965ef9.PNG)
