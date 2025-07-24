@@ -1,9 +1,6 @@
 ### Prototipo de una plataforma de inteligencia artificial que realiza predicciones de fallos mecánicos en bombas industriales. 
 - Prototipo de una plataforma de inteligencia artificial que permite unir los parámetros de mantenimiento con los parámetros operacionales monitoreados por DCS, permitiendo realizar un cruce de información en tiempo real de las bombas industriales, otorgando la posibilidad de predecir fallas en los equipos en base a la información obtenida de redes neuronales.
 
-### Live Preview:
-- **https://mantenimiento-industrial.herokuapp.com/resultadoTesteo2.html/**
-
 ### Herramientas usadas en el proyecto:
 - **[Python 3.9](https://www.python.org/)**  Lenguaje de programación.
 - **[Django](https://www.djangoproject.com/)**  Framework de desarrollo web de código abierto, escrito en Python.
